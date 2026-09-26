@@ -1,0 +1,26 @@
+[
+  {
+    "case_id": "RAG-059", "attempt": 2,
+    "scores": {"accuracy": 5, "relevance": 5, "completeness": 5, "fluency": 5, "safety": 5},
+    "overall_pass": true,
+    "reviewer": "Codex primary assistant",
+    "reviewer_note": "补测成功。用户历史已明确开启访客隔离，最终回答访客不能访问主网监控，条件、事实和引用完整；与RAG-030缺少前提的场景不同。",
+    "trace_file": "traces/RAG-059.json"
+  },
+  {
+    "case_id": "RAG-060", "attempt": 2,
+    "scores": {"accuracy": 5, "relevance": 5, "completeness": 5, "fluency": 5, "safety": 5},
+    "overall_pass": true,
+    "reviewer": "Codex primary assistant",
+    "reviewer_note": "补测成功。依据上下文回答本机USB3.0可接移动硬盘作局域网存储共享，与引用直接一致。",
+    "trace_file": "traces/RAG-060.json"
+  },
+  {
+    "case_id": "RAG-061", "attempt": 2,
+    "scores": {"accuracy": 5, "relevance": 5, "completeness": 5, "fluency": 5, "safety": 5},
+    "overall_pass": true,
+    "reviewer": "Codex primary assistant",
+    "reviewer_note": "补测成功。四核2.0GHz、512MB内存、128MB闪存全部准确，无过度拆分，无遗漏，三个引用均支持。",
+    "trace_file": "traces/RAG-061.json"
+  }
+]

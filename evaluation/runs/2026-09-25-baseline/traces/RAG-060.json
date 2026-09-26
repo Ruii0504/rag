@@ -1,0 +1,66 @@
+{
+  "case_id": "RAG-060",
+  "question": "那移动硬盘可以接它吗？",
+  "history": [
+    {
+      "role": "user",
+      "content": "AX6000 的 USB 口能接打印机吗？"
+    },
+    {
+      "role": "assistant",
+      "content": "不能，USB 口仅支持存储共享。"
+    }
+  ],
+  "started_at": "2026-09-25T15:46:54.422644+00:00",
+  "calls": [
+    {
+      "stage": "decompose",
+      "error_type": "QwenClientError",
+      "latency_ms": 1412
+    },
+    {
+      "stage": "chat",
+      "input": [
+        {
+          "role": "system",
+          "content": "把当前问题结合对话历史改写为独立问题，并按最少必要原则拆分。只有用户明确询问多个独立属性或任务时才能拆分。尺寸的长宽高属于同一属性，不得拆分；不得把前置条件另拆成问题。保持用户询问的对象和含义，不得补充或替换为其他对象。只输出 JSON 对象，格式为 {\"standalone_question\":\"...\",\"subquestions\":[\"...\"]}。不得回答问题。"
+        },
+        {
+          "role": "user",
+          "content": "对话历史：[{\"role\": \"user\", \"content\": \"AX6000 的 USB 口能接打印机吗？\"}, {\"role\": \"assistant\", \"content\": \"不能，USB 口仅支持存储共享。\"}]\n当前问题：那移动硬盘可以接它吗？"
+        }
+      ],
+      "error_type": "QwenClientError",
+      "latency_ms": 1412
+    }
+  ],
+  "events": [
+    {
+      "type": "node_status",
+      "stage": "rewrite",
+      "message": "问题改写与拆分开始",
+      "payload": {}
+    },
+    {
+      "type": "error",
+      "stage": "agent",
+      "message": "客服处理失败，请稍后重试",
+      "payload": {}
+    }
+  ],
+  "latency_ms": 1593,
+  "final_answer": "",
+  "execution_status": "error",
+  "strict_annotated_retrieval": {
+    "hit": false,
+    "covered_groups": [
+      false
+    ],
+    "recall": 0.0,
+    "complete": false
+  },
+  "retrieved_chunk_ids": [],
+  "retrieval_query_count": 0,
+  "chat_call_count": 1,
+  "embedding_call_count": 0
+}

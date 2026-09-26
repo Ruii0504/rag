@@ -1,0 +1,10 @@
+{
+  "description": "This web application offers a user-friendly interface for managing project requirements and design prototypes, streamlining collaboration for teams.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

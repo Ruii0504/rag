@@ -1,0 +1,20 @@
+{
+  "case_count": 100,
+  "tier_counts": {
+    "core": 60,
+    "edge": 30,
+    "high_risk": 10
+  },
+  "behavior_counts": {
+    "answer": 90,
+    "refuse": 6,
+    "partial_answer": 3,
+    "clarify": 1
+  },
+  "cited_chunk_count": 41,
+  "history_case_count": 3,
+  "validation_status": "passed",
+  "live_corpus_matches_snapshot": true,
+  "model_evaluation_run": false,
+  "semantic_gold_review": "agent_reviewed_pending_user_signoff"
+}

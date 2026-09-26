@@ -1,0 +1,73 @@
+{
+  "dataset_version": "1.0",
+  "snapshot_at": "2026-09-25T14:03:13.523106+00:00",
+  "source": "Read-only SQLite metadata and Chroma persisted document text",
+  "chunk_count": 55,
+  "documents": [
+    {
+      "id": "2a101509-5c7a-432b-b385-93bc3091be9c",
+      "kb_id": "f3d12201-b59f-4c71-a42a-9a9e440d97d6",
+      "filename": "01-产品介绍与技术规格.md",
+      "content_hash": "293ce5e3668e8b3bf9b859e7e4f889e99608b357d55a96efc807db1b0af52e6a",
+      "file_path": "D:\\Desktop\\AI Workflow\\RAG Codex\\rag-customer-service\\data\\uploads\\f3d12201-b59f-4c71-a42a-9a9e440d97d6\\2a101509-5c7a-432b-b385-93bc3091be9c.md",
+      "chunk_count": 19,
+      "status": "ready",
+      "created_at": "2026-08-27T08:34:20.149653+00:00",
+      "source_path": "product data/01-产品介绍与技术规格.md"
+    },
+    {
+      "id": "697856ba-4ee3-4889-8830-10c4d1943930",
+      "kb_id": "f3d12201-b59f-4c71-a42a-9a9e440d97d6",
+      "filename": "02-开箱与安装联网.md",
+      "content_hash": "5d21aacd058856331ccbba5073e00260604fa2b732e4d395c856132ec7f34d25",
+      "file_path": "D:\\Desktop\\AI Workflow\\RAG Codex\\rag-customer-service\\data\\uploads\\f3d12201-b59f-4c71-a42a-9a9e440d97d6\\697856ba-4ee3-4889-8830-10c4d1943930.md",
+      "chunk_count": 18,
+      "status": "ready",
+      "created_at": "2026-08-27T08:34:21.206665+00:00",
+      "source_path": "product data/02-开箱与安装联网.md"
+    },
+    {
+      "id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26",
+      "kb_id": "f3d12201-b59f-4c71-a42a-9a9e440d97d6",
+      "filename": "03-WiFi与网络设置.md",
+      "content_hash": "3e3dd8a48300bc685f66506a515b876b6af62f4e9432411db1f61395781ba365",
+      "file_path": "D:\\Desktop\\AI Workflow\\RAG Codex\\rag-customer-service\\data\\uploads\\f3d12201-b59f-4c71-a42a-9a9e440d97d6\\59ca83a5-b7b0-4e52-85dd-01440f04ef26.md",
+      "chunk_count": 18,
+      "status": "ready",
+      "created_at": "2026-08-27T08:34:22.020470+00:00",
+      "source_path": "product data/03-WiFi与网络设置.md"
+    }
+  ],
+  "snapshot_sha256": "73c4c127ec7413278a6ef8ed978710173126f1776b9e6234515de74dced719ea",
+  "embedding_model": "text-embedding-v4",
+  "embedding_dimension": 1024,
+  "annotation_status": "agent_authored_pending_user_review",
+  "model_evaluation_run": false,
+  "frequency_basis": "User-assigned 60/30/10 sampling quotas; not measured production traffic",
+  "case_count": 100,
+  "tier_counts": {
+    "core": 60,
+    "edge": 30,
+    "high_risk": 10
+  },
+  "behavior_counts": {
+    "answer": 90,
+    "refuse": 6,
+    "partial_answer": 3,
+    "clarify": 1
+  },
+  "dataset_sha256": "160bd79172e08ed9f3f69acc491d7b58d0124be4d2b4034c5c72bedfe2c081fd",
+  "inspected_local_configuration": {
+    "source": "Local .env and source inspection; running-process overrides not inspected",
+    "chat_model": "qwen3.7-plus",
+    "retrieval_top_k": 7,
+    "retrieval_score_threshold": 0.5,
+    "candidate_pool_multiplier": 20,
+    "requested_candidate_pool": 140,
+    "available_corpus_size": 55,
+    "score_formula": "1 / (1 + L2_distance)",
+    "ranking": "character bigram relevance descending, then vector similarity descending",
+    "chunk_size": 800,
+    "chunk_overlap": 100
+  }
+}

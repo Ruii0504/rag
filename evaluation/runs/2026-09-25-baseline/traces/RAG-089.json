@@ -1,0 +1,514 @@
+{
+  "case_id": "RAG-089",
+  "question": "明天北京会不会下雨？",
+  "history": [],
+  "started_at": "2026-09-25T22:21:56.045728+00:00",
+  "calls": [
+    {
+      "stage": "decompose",
+      "output": {
+        "standalone_question": "明天北京会不会下雨？",
+        "subquestions": [
+          {
+            "id": "q1",
+            "text": "明天北京会不会下雨？"
+          }
+        ],
+        "truncated": false
+      },
+      "latency_ms": 3757
+    },
+    {
+      "stage": "chat",
+      "input": [
+        {
+          "role": "system",
+          "content": "把当前问题结合对话历史改写为独立问题，并按最少必要原则拆分。只有用户明确询问多个独立属性或任务时才能拆分。尺寸的长宽高属于同一属性，不得拆分；不得把前置条件另拆成问题。保持用户询问的对象和含义，不得补充或替换为其他对象。只输出 JSON 对象，格式为 {\"standalone_question\":\"...\",\"subquestions\":[\"...\"]}。不得回答问题。"
+        },
+        {
+          "role": "user",
+          "content": "对话历史：[]\n当前问题：明天北京会不会下雨？"
+        }
+      ],
+      "output": "```json\n{\n  \"standalone_question\": \"明天北京会不会下雨？\",\n  \"subquestions\": []\n}\n```",
+      "latency_ms": 3757
+    },
+    {
+      "stage": "retrieval",
+      "input": {
+        "query": "明天北京会不会下雨？",
+        "kb_ids": [
+          "f3d12201-b59f-4c71-a42a-9a9e440d97d6"
+        ]
+      },
+      "output": {
+        "query": "明天北京会不会下雨？",
+        "evidences": [],
+        "has_sufficient_evidence": false,
+        "reason": "未检索到达到相似度阈值的证据"
+      },
+      "latency_ms": 1677
+    },
+    {
+      "stage": "embedding",
+      "input": "明天北京会不会下雨？",
+      "output": {
+        "dimension": 1024
+      },
+      "latency_ms": 1665
+    },
+    {
+      "stage": "vector_search",
+      "input": {
+        "kb_ids": [
+          "f3d12201-b59f-4c71-a42a-9a9e440d97d6"
+        ],
+        "requested_k": 140
+      },
+      "output": [
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:14",
+          "distance": 1.4607055187225342,
+          "similarity": 0.4063875146340738,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:8",
+          "distance": 1.4696903228759766,
+          "similarity": 0.40490906521247205,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:4",
+          "distance": 1.4714006185531616,
+          "similarity": 0.40462885397569925,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:12",
+          "distance": 1.474005937576294,
+          "similarity": 0.4042027485914883,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:9",
+          "distance": 1.4754886627197266,
+          "similarity": 0.40396064625936823,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:7",
+          "distance": 1.4825972318649292,
+          "similarity": 0.4028039615788982,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:5",
+          "distance": 1.4860349893569946,
+          "similarity": 0.4022469531929826,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:13",
+          "distance": 1.4957983493804932,
+          "similarity": 0.4006733958487551,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:10",
+          "distance": 1.5070935487747192,
+          "similarity": 0.39886824346412025,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:11",
+          "distance": 1.5112874507904053,
+          "similarity": 0.3982021252426754,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:15",
+          "distance": 1.5141713619232178,
+          "similarity": 0.3977453626052955,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:13",
+          "distance": 1.5167545080184937,
+          "similarity": 0.3973371247827131,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:16",
+          "distance": 1.5244919061660767,
+          "similarity": 0.3961193131804059,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:16",
+          "distance": 1.5249080657958984,
+          "similarity": 0.396054024123362,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:2",
+          "distance": 1.5263830423355103,
+          "similarity": 0.395822796164572,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:7",
+          "distance": 1.5266090631484985,
+          "similarity": 0.3957873873664745,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:8",
+          "distance": 1.529707670211792,
+          "similarity": 0.3953025923806754,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:2",
+          "distance": 1.530067801475525,
+          "similarity": 0.3952463247889263,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:10",
+          "distance": 1.5382094383239746,
+          "similarity": 0.3939785208033573,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:9",
+          "distance": 1.5542066097259521,
+          "similarity": 0.391511006271843,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:4",
+          "distance": 1.5580787658691406,
+          "similarity": 0.39091837723778494,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:10",
+          "distance": 1.559218168258667,
+          "similarity": 0.39074433450135126,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:12",
+          "distance": 1.5606199502944946,
+          "similarity": 0.39053042599507626,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:17",
+          "distance": 1.5615723133087158,
+          "similarity": 0.3903852312911386,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:15",
+          "distance": 1.5635603666305542,
+          "similarity": 0.3900824856776678,
+          "lexical_relevance": 0.125
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:13",
+          "distance": 1.5674550533294678,
+          "similarity": 0.3894907522151958,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:18",
+          "distance": 1.5690743923187256,
+          "similarity": 0.3892452484014864,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:11",
+          "distance": 1.5696666240692139,
+          "similarity": 0.38915553894553173,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:0",
+          "distance": 1.5706297159194946,
+          "similarity": 0.3890097410012658,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:14",
+          "distance": 1.5712602138519287,
+          "similarity": 0.3889143520413788,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:14",
+          "distance": 1.5788872241973877,
+          "similarity": 0.3877641451774706,
+          "lexical_relevance": 0.125
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:0",
+          "distance": 1.5831208229064941,
+          "similarity": 0.3871286202070923,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:12",
+          "distance": 1.5843273401260376,
+          "similarity": 0.38694788561546156,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:11",
+          "distance": 1.5848236083984375,
+          "similarity": 0.3868735942951257,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:3",
+          "distance": 1.5871707201004028,
+          "similarity": 0.3865226180208131,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:6",
+          "distance": 1.590850591659546,
+          "similarity": 0.38597362704711546,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:1",
+          "distance": 1.5918750762939453,
+          "similarity": 0.38582106411929157,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:8",
+          "distance": 1.5950369834899902,
+          "similarity": 0.38535096276552055,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:15",
+          "distance": 1.5988919734954834,
+          "similarity": 0.3847793637436227,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:6",
+          "distance": 1.6044325828552246,
+          "similarity": 0.38396079306599123,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:0",
+          "distance": 1.6094955205917358,
+          "similarity": 0.3832158331405135,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:16",
+          "distance": 1.6141893863677979,
+          "similarity": 0.3825277561047014,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:3",
+          "distance": 1.6157573461532593,
+          "similarity": 0.3822984580242518,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:17",
+          "distance": 1.6210464239120483,
+          "similarity": 0.381527008021265,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:9",
+          "distance": 1.633634090423584,
+          "similarity": 0.3797034689200745,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:17",
+          "distance": 1.6459846496582031,
+          "similarity": 0.37793114186402244,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:5",
+          "distance": 1.6519287824630737,
+          "similarity": 0.3770840328039331,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:7",
+          "distance": 1.6650515794754028,
+          "similarity": 0.3752272592776021,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:4",
+          "distance": 1.6687978506088257,
+          "similarity": 0.37470054158349714,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:1",
+          "distance": 1.6822547912597656,
+          "similarity": 0.3728206594163015,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:1",
+          "distance": 1.683888554573059,
+          "similarity": 0.37259371231942806,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:2",
+          "distance": 1.6887881755828857,
+          "similarity": 0.3719147566480265,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:5",
+          "distance": 1.7032150030136108,
+          "similarity": 0.3699298793788786,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:3",
+          "distance": 1.7788957357406616,
+          "similarity": 0.35985517093661995,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:6",
+          "distance": 1.7983976602554321,
+          "similarity": 0.35734735423868313,
+          "lexical_relevance": 0.0
+        }
+      ],
+      "latency_ms": 8
+    },
+    {
+      "stage": "judge",
+      "output": [
+        {
+          "subquestion_id": "q1",
+          "answerable": false,
+          "evidence_ids": [],
+          "missing_information": "直接证据",
+          "reason": "未检索到相关候选资料"
+        }
+      ],
+      "latency_ms": 0
+    },
+    {
+      "stage": "compose",
+      "output": "**明天北京会不会下雨？**\n当前知识库未找到相关资料，因此无法确认。",
+      "latency_ms": 0
+    }
+  ],
+  "events": [
+    {
+      "type": "node_status",
+      "stage": "rewrite",
+      "message": "问题改写与拆分开始",
+      "payload": {}
+    },
+    {
+      "type": "node_status",
+      "stage": "rewrite",
+      "message": "问题拆分完成：1 项",
+      "payload": {
+        "query": "明天北京会不会下雨？",
+        "subquestions": [
+          {
+            "id": "q1",
+            "text": "明天北京会不会下雨？"
+          }
+        ],
+        "truncated": false
+      }
+    },
+    {
+      "type": "tool_status",
+      "stage": "retrieval",
+      "message": "开始检索 1 个子问题",
+      "payload": {
+        "kb_ids": [
+          "f3d12201-b59f-4c71-a42a-9a9e440d97d6"
+        ],
+        "subquestion_count": 1
+      }
+    },
+    {
+      "type": "tool_status",
+      "stage": "retrieval",
+      "message": "候选检索完成：0 条",
+      "payload": {
+        "count": 0
+      }
+    },
+    {
+      "type": "node_status",
+      "stage": "judge",
+      "message": "语义证据判定开始",
+      "payload": {}
+    },
+    {
+      "type": "evidence",
+      "stage": "judge",
+      "message": "语义判定完成：0/1 项可回答",
+      "payload": {
+        "result": {
+          "query": "明天北京会不会下雨？",
+          "evidences": [],
+          "has_sufficient_evidence": false,
+          "reason": "未找到相关资料"
+        },
+        "count": 0,
+        "decisions": [
+          {
+            "subquestion_id": "q1",
+            "answerable": false,
+            "evidence_ids": [],
+            "missing_information": "直接证据",
+            "reason": "未检索到相关候选资料"
+          }
+        ]
+      }
+    },
+    {
+      "type": "answer_delta",
+      "stage": "refuse",
+      "message": "**明天北京会不会下雨？**\n当前知识库未找到相关资料，因此无法确认。",
+      "payload": {
+        "reason": "所有子问题均缺少直接证据"
+      }
+    },
+    {
+      "type": "completed",
+      "stage": "agent",
+      "message": "处理完成",
+      "payload": {}
+    }
+  ],
+  "latency_ms": 5438,
+  "final_answer": "**明天北京会不会下雨？**\n当前知识库未找到相关资料，因此无法确认。",
+  "execution_status": "completed",
+  "strict_annotated_retrieval": null,
+  "retrieved_chunk_ids": [],
+  "retrieval_query_count": 1,
+  "chat_call_count": 1,
+  "embedding_call_count": 1
+}

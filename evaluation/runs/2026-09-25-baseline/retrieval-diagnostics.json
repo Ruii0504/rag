@@ -1,0 +1,401 @@
+[
+  {
+    "case_id": "RAG-001",
+    "missing_groups": [
+      {
+        "group_index": 0,
+        "claim": "检查光猫到蓝色 WAN 口的接线和插紧情况",
+        "observations": [
+          {
+            "query": "AX6000 接好了但 WAN 灯一直不亮，先查哪里？",
+            "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:9",
+            "vector_rank": 15,
+            "lexical_rank": 39,
+            "similarity": 0.5960715351953914,
+            "threshold_pass": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "RAG-003",
+    "missing_groups": [
+      {
+        "group_index": 1,
+        "claim": "WAN 灯不亮优先查光猫与网线",
+        "observations": [
+          {
+            "query": "手机明明连上了 Nebula_AX6000，却显示无互联网怎么办？",
+            "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:13",
+            "vector_rank": 2,
+            "lexical_rank": 10,
+            "similarity": 0.6286776437958406,
+            "threshold_pass": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "RAG-005",
+    "missing_groups": [
+      {
+        "group_index": 0,
+        "claim": "连接本机 WiFi 或 LAN 并完整输入管理地址，仍失败可重启",
+        "observations": [
+          {
+            "query": "192.168.10.1 打不开，路由器是不是坏了？",
+            "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:11",
+            "vector_rank": 26,
+            "lexical_rank": 2,
+            "similarity": 0.4885499597563717,
+            "threshold_pass": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "RAG-014",
+    "missing_groups": [
+      {
+        "group_index": 1,
+        "claim": "无线设置分别控制两个频段开关",
+        "observations": [
+          {
+            "query": "无线灯不亮或发红，而且搜不到对应 WiFi，先看哪里？",
+            "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:14",
+            "vector_rank": 39,
+            "lexical_rank": 1,
+            "similarity": 0.48258382934384864,
+            "threshold_pass": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "RAG-020",
+    "missing_groups": [
+      {
+        "group_index": 0,
+        "claim": "合一同名自动选频，关闭后可分别命名",
+        "observations": [
+          {
+            "query": "开了合一之后只看到一个名字，5G 不见了，是坏了吗？",
+            "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:13",
+            "vector_rank": 25,
+            "lexical_rank": 9,
+            "similarity": 0.47335433404103744,
+            "threshold_pass": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "RAG-022",
+    "missing_groups": [
+      {
+        "group_index": 0,
+        "claim": "确认终端 WiFi 6 并用有线测速判断宽带瓶颈",
+        "observations": [
+          {
+            "query": "5G 信号满格，但测速还是很慢，该怎样区分原因？",
+            "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:14",
+            "vector_rank": 12,
+            "lexical_rank": 1,
+            "similarity": 0.46239600564668737,
+            "threshold_pass": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "RAG-023",
+    "missing_groups": [
+      {
+        "group_index": 0,
+        "claim": "视频卡顿尝试切 5G、关合一、错峰并核查运营商",
+        "observations": [
+          {
+            "query": "信号格都是满的，刷视频却一卡一卡的，能试哪些办法？",
+            "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:15",
+            "vector_rank": 2,
+            "lexical_rank": 1,
+            "similarity": 0.4981190066607009,
+            "threshold_pass": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "RAG-025",
+    "missing_groups": [
+      {
+        "group_index": 1,
+        "claim": "中心开阔位置并留散热空间",
+        "observations": [
+          {
+            "query": "为了好看把路由器放进金属弱电箱后信号变差了，怎么办？",
+            "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:11",
+            "vector_rank": 29,
+            "lexical_rank": 4,
+            "similarity": 0.47682290257465704,
+            "threshold_pass": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "RAG-028",
+    "missing_groups": [
+      {
+        "group_index": 0,
+        "claim": "烫手或掉线核查散热及 40°C 环境上限",
+        "observations": [
+          {
+            "query": "机身烫手还频繁掉线，先检查哪些条件？",
+            "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:17",
+            "vector_rank": 22,
+            "lexical_rank": 1,
+            "similarity": 0.49031502210378414,
+            "threshold_pass": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "RAG-034",
+    "missing_groups": [
+      {
+        "group_index": 0,
+        "claim": "不能按单个 App，支持分类、设备与时段",
+        "observations": [
+          {
+            "query": "家长控制里怎么找不到单独禁止某个 App 的选项？",
+            "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:12",
+            "vector_rank": 8,
+            "lexical_rank": 1,
+            "similarity": 0.4678949599518083,
+            "threshold_pass": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "RAG-047",
+    "missing_groups": [
+      {
+        "group_index": 1,
+        "claim": "PPPoE 时输入运营商账号密码",
+        "observations": [
+          {
+            "query": "家里没有电脑，只靠手机能把 AX6000 安装上网吗？",
+            "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:6",
+            "vector_rank": 53,
+            "lexical_rank": 47,
+            "similarity": 0.4555579691885269,
+            "threshold_pass": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "RAG-059",
+    "missing_groups": [
+      {
+        "group_index": 0,
+        "claim": "隔离后访客无法访问主网监控",
+        "observations": []
+      }
+    ]
+  },
+  {
+    "case_id": "RAG-060",
+    "missing_groups": [
+      {
+        "group_index": 0,
+        "claim": "USB 可接移动硬盘进行存储共享",
+        "observations": []
+      }
+    ]
+  },
+  {
+    "case_id": "RAG-061",
+    "missing_groups": [
+      {
+        "group_index": 0,
+        "claim": "四核 2.0GHz、512MB 内存、128MB 闪存",
+        "observations": []
+      }
+    ]
+  },
+  {
+    "case_id": "RAG-064",
+    "missing_groups": [
+      {
+        "group_index": 0,
+        "claim": "功耗不超过 18W，全天约 0.4 度为估算",
+        "observations": [
+          {
+            "query": "路由器功耗有多大，一天大概耗多少电？",
+            "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:17",
+            "vector_rank": 9,
+            "lexical_rank": 1,
+            "similarity": 0.47306640929989724,
+            "threshold_pass": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "RAG-074",
+    "missing_groups": [
+      {
+        "group_index": 0,
+        "claim": "无固定挂孔，上墙用支架并保证散热电源",
+        "observations": [
+          {
+            "query": "这款能挂墙吗，自带挂孔吗？",
+            "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:15",
+            "vector_rank": 11,
+            "lexical_rank": 1,
+            "similarity": 0.4764405631223792,
+            "threshold_pass": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "RAG-080",
+    "missing_groups": [
+      {
+        "group_index": 0,
+        "claim": "SSID 可去掉或保留 _5G 后缀",
+        "observations": [
+          {
+            "query": "5G 名称后面的 _5G 能删掉吗？",
+            "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:15",
+            "vector_rank": 4,
+            "lexical_rank": 1,
+            "similarity": 0.49328898053002257,
+            "threshold_pass": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "RAG-084",
+    "missing_groups": [
+      {
+        "group_index": 0,
+        "claim": "型号、默认 WiFi 名、管理地址三项核对",
+        "observations": [
+          {
+            "query": "怎么确认手里这台就是文档说的 NL-AX6000？",
+            "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:11",
+            "vector_rank": 5,
+            "lexical_rank": 12,
+            "similarity": 0.6567796188840364,
+            "threshold_pass": true
+          },
+          {
+            "query": "怎么确认手里这台就是文档说的 NL-AX6000？",
+            "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:15",
+            "vector_rank": 6,
+            "lexical_rank": 13,
+            "similarity": 0.6354798085395993,
+            "threshold_pass": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "RAG-091",
+    "missing_groups": [
+      {
+        "group_index": 1,
+        "claim": "避免直接恢复出厂造成重新配置",
+        "observations": [
+          {
+            "query": "只是 WiFi 密码忘了，但我还能用网线登录后台，是不是必须恢复出厂？",
+            "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:17",
+            "vector_rank": 17,
+            "lexical_rank": 13,
+            "similarity": 0.5396333165326633,
+            "threshold_pass": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "RAG-094",
+    "missing_groups": [
+      {
+        "group_index": 1,
+        "claim": "建议大小写字母数字且 8 位以上",
+        "observations": [
+          {
+            "query": "为了省事，主 WiFi 密码用 12345678 安全吧？",
+            "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:3",
+            "vector_rank": 2,
+            "lexical_rank": 14,
+            "similarity": 0.5695394390714709,
+            "threshold_pass": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "RAG-096",
+    "missing_groups": [
+      {
+        "group_index": 0,
+        "claim": "首次强制改默认 admin 是防止后台被篡改",
+        "observations": [
+          {
+            "query": "首次登录强制改 admin 密码很麻烦，可以一直用默认密码并保证安全吗？",
+            "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:11",
+            "vector_rank": 13,
+            "lexical_rank": 4,
+            "similarity": 0.48146486029032154,
+            "threshold_pass": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "RAG-100",
+    "missing_groups": [
+      {
+        "group_index": 0,
+        "claim": "配置中禁止断电，避免写入不完整",
+        "observations": [
+          {
+            "query": "设置向导正在保存配置，拔电源让它快点重启应该没问题吧？",
+            "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:10",
+            "vector_rank": 1,
+            "lexical_rank": 11,
+            "similarity": 0.6005582395640613,
+            "threshold_pass": true
+          }
+        ]
+      }
+    ]
+  }
+]

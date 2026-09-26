@@ -1,0 +1,36 @@
+{
+  "case_id": "RAG-054",
+  "run_id": null,
+  "dataset_sha256": null,
+  "corpus_snapshot_sha256": null,
+  "model_and_prompt_version": null,
+  "effective_config": null,
+  "rewritten_question": null,
+  "actual_intents": null,
+  "retrieval_by_intent": [
+    {
+      "intent": "星云智联 AX6000 智能路由器的整机尺寸是多少？",
+      "raw_vector_candidates": null,
+      "reranked_candidates": null,
+      "accepted_evidences": null,
+      "hit_at_7": null,
+      "evidence_group_coverage": null
+    }
+  ],
+  "semantic_judgment": null,
+  "initial_answer": null,
+  "validation_results": null,
+  "regeneration_count": null,
+  "final_answer": null,
+  "required_points_passed": null,
+  "required_behavior_passed": null,
+  "unsupported_claims": null,
+  "citation_support_passed": null,
+  "overall_pass": null,
+  "primary_failure_stage": null,
+  "secondary_failure_stages": null,
+  "reviewer_notes": null,
+  "latency_ms": null,
+  "model_call_count": null,
+  "execution_status": "not_run"
+}

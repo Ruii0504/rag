@@ -1,0 +1,46 @@
+{
+  "started_at": "2026-09-26T08:38:47.132907+00:00",
+  "identity": {
+    "dataset_sha256": "160bd79172e08ed9f3f69acc491d7b58d0124be4d2b4034c5c72bedfe2c081fd",
+    "snapshot_sha256": "73c4c127ec7413278a6ef8ed978710173126f1776b9e6234515de74dced719ea",
+    "source_sha256": {
+      "rag-customer-service\\src\\rag_customer_service\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rag-customer-service\\src\\rag_customer_service\\agent.py": "eaa199ea66578d9de57d24de26782f2d46d0592d8d6787d9eb326b2990d93158",
+      "rag-customer-service\\src\\rag_customer_service\\answering.py": "03982ca9aa3ead1eb72f1d597953008d849ffd86d290f2d910d4945fc5563a1b",
+      "rag-customer-service\\src\\rag_customer_service\\api.py": "3feb1333097e8be8165a10dc22d6adb91ecd39ce5254ed05d8886ae5f1378e84",
+      "rag-customer-service\\src\\rag_customer_service\\bootstrap.py": "5a9bed7d7ebee44369b2a89a9b74417cac26eab84c99448afc16538b65dedaf5",
+      "rag-customer-service\\src\\rag_customer_service\\config.py": "c8dd468b9e243cec316bc42b19238ab8f112a571525ab70037350ac2684d0486",
+      "rag-customer-service\\src\\rag_customer_service\\ingestion.py": "66d95f15a53b68f34f79db1aafe5e24c0370da06fc4ea5074bab3e00b560be96",
+      "rag-customer-service\\src\\rag_customer_service\\knowledge_base.py": "d89af0598853a9be675b4f18ab33eedba0ecfb7e6e2387e629835313e25bb714",
+      "rag-customer-service\\src\\rag_customer_service\\model_diagnostics.py": "4c8c78b1a55f584692cf5fc4f8fdafccb3b32d9313f9f9ec7443f5cbd2594b62",
+      "rag-customer-service\\src\\rag_customer_service\\models.py": "3007d88eb892809549c837b1ba32472943e5fa49630be0aab285edd6c8f9ee5c",
+      "rag-customer-service\\src\\rag_customer_service\\qwen.py": "d0e39b6db3b947d7a186bbea5fad1f6545a913959263261f6e97bd403bbd5403",
+      "rag-customer-service\\src\\rag_customer_service\\rerank.py": "d8bdfeea5f414589e32b9d5d90f40fbe086a9c72a4c0eaca8dd384f132d79996",
+      "rag-customer-service\\src\\rag_customer_service\\retrieval.py": "811ffcf3facdb3f4b4be4d736b1eb9b63aab219996a24b432a7c9c167740d1f7",
+      "rag-customer-service\\src\\rag_customer_service\\server.py": "22693f741af8b12c06e9399dc5d1f6d7048021a05ace11b351cb4b023c96a634",
+      "rag-customer-service\\src\\rag_customer_service\\storage.py": "863573a1e6d81bb0a03204dd71f2905607916e22ab467edd9debf7675fa999cc",
+      "rag-customer-service\\src\\rag_customer_service\\vector_store.py": "0c9473063e3348392c0f8218a9d3c0e9cf72c3c12b27734ecf585a6700ebaf55"
+    },
+    "settings": {
+      "qwen_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+      "qwen_chat_model": "qwen3.7-plus",
+      "qwen_embedding_model": "text-embedding-v4",
+      "qwen_embedding_dimension": 1024,
+      "sqlite_path": "D:\\Desktop\\AI Workflow\\RAG Codex\\rag-customer-service\\data\\app.db",
+      "chroma_path": "D:\\Desktop\\AI Workflow\\RAG Codex\\rag-customer-service\\data\\chroma",
+      "uploads_path": "D:\\Desktop\\AI Workflow\\RAG Codex\\rag-customer-service\\data\\uploads",
+      "chunk_size": 800,
+      "chunk_overlap": 100,
+      "retrieval_top_k": 7,
+      "retrieval_score_threshold": 0.5,
+      "qwen_rerank_model": "qwen3-rerank",
+      "qwen_rerank_url": "https://maas.qianwenaiapi.com/compatible-api/v1/reranks"
+    },
+    "temperature": 0,
+    "rubric_sha256": "0202019be9c8343d69f391c8d71c5b56a8a0ce65aee54d095938a7dde3776fb3"
+  },
+  "entrypoint": "build_container(settings).agent.stream",
+  "concurrency": 1,
+  "scorer": "Codex primary assistant; no Qwen self-scoring",
+  "sdk_retries": "chat/embedding at most 1 retry; rerank at most 1 transient retry"
+}
