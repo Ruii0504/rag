@@ -1,0 +1,13 @@
+.venv/
+.pip-tmp/
+.env
+__pycache__/
+.pytest_cache/
+*.egg-info/
+*.py[cod]
+data/app.db
+data/chroma/
+data/uploads/
+frontend/node_modules/
+frontend/dist/
+test-tmp/
