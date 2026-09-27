@@ -1,0 +1,14 @@
+0000000000000000000000000000000000000000 24dd91e8bdf7884c4560554caaae7317ae200e40 Codex Agent <codex@local> 1787720633 +0800	commit (initial): 建立项目骨架和配置
+24dd91e8bdf7884c4560554caaae7317ae200e40 50c5b2f24a0a03c4a5e880ddac303ecb109d67b3 Codex Agent <codex@local> 1787720928 +0800	commit: 增加知识库元数据与文件存储
+50c5b2f24a0a03c4a5e880ddac303ecb109d67b3 aa95d2f6a188c21a9fbfefca04ccf56223681e8e Codex Agent <codex@local> 1787725584 +0800	commit: 封装千问模型接口
+aa95d2f6a188c21a9fbfefca04ccf56223681e8e 67a6de3edf9c8e64d6639f69f5ae7f88789000ce Codex Agent <codex@local> 1787726102 +0800	commit: 增加 Markdown 摄取准备流程
+67a6de3edf9c8e64d6639f69f5ae7f88789000ce 8fb02087360abf6e58c5d321043e8649381159ed Codex Agent <codex@local> 1787726622 +0800	commit: 增加 Chroma 单集合存储
+8fb02087360abf6e58c5d321043e8649381159ed 6d075615d7c84df499ec60e6595934a473f44292 Codex Agent <codex@local> 1787727086 +0800	commit: 完成知识库生命周期
+6d075615d7c84df499ec60e6595934a473f44292 c2753fbbe941261567f3b4d7d1fb5d8ababfcf5d Codex Agent <codex@local> 1787727398 +0800	commit: 增加证据优先检索
+c2753fbbe941261567f3b4d7d1fb5d8ababfcf5d 00a9f583d10df5ea367981f1fa0bd0ff024ba64d Codex Agent <codex@local> 1787727730 +0800	commit: 构建确定性客服 Agent
+00a9f583d10df5ea367981f1fa0bd0ff024ba64d 439a318e263bbc8f664f32cc5b3a6c7d47b9d318 Codex Agent <codex@local> 1787727983 +0800	commit: 集中应用依赖组合
+439a318e263bbc8f664f32cc5b3a6c7d47b9d318 1f3068fa9e5a294ac3ad9fce97903f376e61caba Codex Agent <codex@local> 1787729057 +0800	commit: 增加首页和知识库功能原型
+1f3068fa9e5a294ac3ad9fce97903f376e61caba e74e5c5c3d01ed938e4cc6790c7f3847604f901b Codex Agent <codex@local> 1787729855 +0800	commit: 增加客服对话功能原型
+e74e5c5c3d01ed938e4cc6790c7f3847604f901b 6ac699b65e067cf60df81c6f0f2a9425afced47e Codex Agent <codex@local> 1790411348 +0800	commit: first_commit
+6ac699b65e067cf60df81c6f0f2a9425afced47e 1ddfce8070c487fa68c9aa105ac32f6e9fd885a3 Codex Agent <codex@local> 1790411384 +0800	commit: fist_commit
+1ddfce8070c487fa68c9aa105ac32f6e9fd885a3 279ad0675bdf925520e6108ad026547b63e1c464 Codex Agent <codex@local> 1790511016 +0800	commit: update customer service pipeline
