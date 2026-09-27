@@ -296,46 +296,14 @@ rag-customer-service/
 - 会话历史只保留在当前浏览器页面中；
 - 当前是本地单用户 Demo，没有账号、权限和租户隔离；
 - Chat、Embedding 与 Rerank 依赖外部千问接口和当前网络环境；
-- 当前检索链路是向量召回后重排，并非关键词与向量双路融合的混合检索。
 
 ### 后续计划
 
-- 增加关键词检索，与向量召回组成真正的混合检索；
 - 支持 PDF、Word 等更多文档格式；
 - 增加会话持久化与历史会话管理；
 - 增加更细粒度的文档预览和引用定位。
 
 <a id="faq"></a>
-
-## 常见问题
-
-<details>
-<summary><strong>接口调用失败时应检查什么？</strong></summary>
-
-依次确认 `.env` 中的 API Key 是否有效、Base URL 是否可访问、对应模型是否已经开通，以及当前网络能否连接阿里云百炼。应用只向页面返回不含密钥的简短错误，详细诊断应在本机安全环境中完成。
-
-</details>
-
-<details>
-<summary><strong>为什么资料相关，系统仍然拒绝回答？</strong></summary>
-
-检索和重排只负责寻找候选资料，是否能够回答还要经过语义证据判定。候选内容如果缺少问题要求的直接事实、条件或对象关系，会保留为“相关资料”，但不会作为回答依据。
-
-</details>
-
-<details>
-<summary><strong>为什么修改 Embedding 配置后无法继续使用旧数据？</strong></summary>
-
-不同模型或维度生成的向量空间不兼容。修改 `QWEN_EMBEDDING_MODEL` 或 `QWEN_EMBEDDING_DIMENSION` 后，需要重建 Chroma 索引，不能直接复用旧向量。
-
-</details>
-
-<details>
-<summary><strong>为什么 Rerank 失败会中断问答？</strong></summary>
-
-当前生产链路将 Rerank 作为检索流程的一部分，并且不会在失败时静默退回旧排序。请检查 `QWEN_RERANK_URL`、API Key、模型权限和网络连接。
-
-</details>
 
 ---
 
