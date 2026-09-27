@@ -1,0 +1,484 @@
+{
+  "case_id": "RAG-063",
+  "question": "六根天线能不能自己拆下来换更强的？",
+  "history": [],
+  "started_at": "2026-09-26T14:07:35.527403+00:00",
+  "calls": [
+    {
+      "stage": "decompose",
+      "output": {
+        "standalone_question": "六根天线能不能自己拆下来换更强的？",
+        "subquestions": [
+          {
+            "id": "q1",
+            "text": "六根天线能不能自己拆下来换更强的？"
+          }
+        ],
+        "truncated": false
+      },
+      "latency_ms": 8176
+    },
+    {
+      "stage": "chat",
+      "input": [
+        {
+          "role": "system",
+          "content": "把当前问题结合对话历史改写为独立问题，并按最少必要原则拆分。只有用户明确询问多个独立属性或任务时才能拆分。尺寸的长宽高属于同一属性，不得拆分；不得把前置条件另拆成问题。保持用户询问的对象和含义，不得补充或替换为其他对象。只输出 JSON 对象，格式为 {\"standalone_question\":\"...\",\"subquestions\":[\"...\"]}。不得回答问题。"
+        },
+        {
+          "role": "user",
+          "content": "对话历史：[]\n当前问题：六根天线能不能自己拆下来换更强的？"
+        }
+      ],
+      "output": "```json\n{\n  \"standalone_question\": \"六根天线能否自行拆卸并更换为更强的天线？\",\n  \"subquestions\": []\n}\n```",
+      "latency_ms": 8176
+    },
+    {
+      "stage": "retrieval",
+      "input": {
+        "query": "六根天线能不能自己拆下来换更强的？",
+        "kb_ids": [
+          "f3d12201-b59f-4c71-a42a-9a9e440d97d6"
+        ]
+      },
+      "error_type": "RerankError",
+      "latency_ms": 580
+    },
+    {
+      "stage": "embedding",
+      "input": "六根天线能不能自己拆下来换更强的？",
+      "output": {
+        "dimension": 1024
+      },
+      "latency_ms": 268
+    },
+    {
+      "stage": "vector_search",
+      "input": {
+        "kb_ids": [
+          "f3d12201-b59f-4c71-a42a-9a9e440d97d6"
+        ],
+        "requested_k": 140
+      },
+      "output": [
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:2",
+          "distance": 0.7240340709686279,
+          "similarity": 0.5800349406309365,
+          "lexical_relevance": 0.06666666666666667
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:16",
+          "distance": 0.8756363391876221,
+          "similarity": 0.533152391594802,
+          "lexical_relevance": 0.13333333333333333
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:8",
+          "distance": 0.8774231672286987,
+          "similarity": 0.532644966492088,
+          "lexical_relevance": 0.06666666666666667
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:17",
+          "distance": 0.9093602895736694,
+          "similarity": 0.5237356225855543,
+          "lexical_relevance": 0.06666666666666667
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:14",
+          "distance": 0.9107623100280762,
+          "similarity": 0.523351331953636,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:4",
+          "distance": 0.9226109385490417,
+          "similarity": 0.5201260327555824,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:6",
+          "distance": 0.9352091550827026,
+          "similarity": 0.5167400109562132,
+          "lexical_relevance": 0.06666666666666667
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:11",
+          "distance": 0.9478305578231812,
+          "similarity": 0.5133916787492854,
+          "lexical_relevance": 0.06666666666666667
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:8",
+          "distance": 0.9507609009742737,
+          "similarity": 0.5126204854221588,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:17",
+          "distance": 0.9801896214485168,
+          "similarity": 0.5050021417991757,
+          "lexical_relevance": 0.06666666666666667
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:16",
+          "distance": 0.9803377389907837,
+          "similarity": 0.5049643706278194,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:10",
+          "distance": 0.9837120771408081,
+          "similarity": 0.504105415056672,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:9",
+          "distance": 0.9854221343994141,
+          "similarity": 0.5036712257176975,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:15",
+          "distance": 0.9943065643310547,
+          "similarity": 0.5014274223859999,
+          "lexical_relevance": 0.06666666666666667
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:16",
+          "distance": 0.9996757507324219,
+          "similarity": 0.500081075461224,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:15",
+          "distance": 1.0010422468185425,
+          "similarity": 0.49973957400944446,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:0",
+          "distance": 1.0070147514343262,
+          "similarity": 0.4982524414857158,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:10",
+          "distance": 1.0126917362213135,
+          "similarity": 0.49684707399724776,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:13",
+          "distance": 1.0138862133026123,
+          "similarity": 0.4965523838410314,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:7",
+          "distance": 1.0141921043395996,
+          "similarity": 0.4964769734949753,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:12",
+          "distance": 1.0148556232452393,
+          "similarity": 0.49631347698717193,
+          "lexical_relevance": 0.13333333333333333
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:0",
+          "distance": 1.0303888320922852,
+          "similarity": 0.49251649939854875,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:18",
+          "distance": 1.0343010425567627,
+          "similarity": 0.49156932975031753,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:12",
+          "distance": 1.0377439260482788,
+          "similarity": 0.4907387955950201,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:2",
+          "distance": 1.0377728939056396,
+          "similarity": 0.49073181952252704,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:0",
+          "distance": 1.0404369831085205,
+          "similarity": 0.49009109728865125,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:1",
+          "distance": 1.0440703630447388,
+          "similarity": 0.4892199496060659,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:4",
+          "distance": 1.06074059009552,
+          "similarity": 0.4852624366241302,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:11",
+          "distance": 1.0615602731704712,
+          "similarity": 0.4850694946998087,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:12",
+          "distance": 1.0666755437850952,
+          "similarity": 0.48386888934124134,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:15",
+          "distance": 1.0743566751480103,
+          "similarity": 0.48207717215683155,
+          "lexical_relevance": 0.06666666666666667
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:9",
+          "distance": 1.0749179124832153,
+          "similarity": 0.48194677677789305,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:3",
+          "distance": 1.076238751411438,
+          "similarity": 0.48164017713290186,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:1",
+          "distance": 1.0769398212432861,
+          "similarity": 0.4814775997705054,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:17",
+          "distance": 1.0775549411773682,
+          "similarity": 0.48133504446977055,
+          "lexical_relevance": 0.06666666666666667
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:14",
+          "distance": 1.0788757801055908,
+          "similarity": 0.48102922241424534,
+          "lexical_relevance": 0.13333333333333333
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:14",
+          "distance": 1.0856540203094482,
+          "similarity": 0.47946590866093414,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:10",
+          "distance": 1.0961196422576904,
+          "similarity": 0.47707200478447837,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:7",
+          "distance": 1.0993194580078125,
+          "similarity": 0.4763448441281863,
+          "lexical_relevance": 0.06666666666666667
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:13",
+          "distance": 1.11183500289917,
+          "similarity": 0.4735218417287239,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:13",
+          "distance": 1.139040231704712,
+          "similarity": 0.46749938836028726,
+          "lexical_relevance": 0.13333333333333333
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:11",
+          "distance": 1.1412383317947388,
+          "similarity": 0.46701947426927576,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:3",
+          "distance": 1.1450450420379639,
+          "similarity": 0.46619067684001647,
+          "lexical_relevance": 0.06666666666666667
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:2",
+          "distance": 1.1606380939483643,
+          "similarity": 0.4628262376752756,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:5",
+          "distance": 1.170501708984375,
+          "similarity": 0.460722972877972,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:9",
+          "distance": 1.2397375106811523,
+          "similarity": 0.4464808912790314,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:1",
+          "distance": 1.2614758014678955,
+          "similarity": 0.4421891224088768,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:8",
+          "distance": 1.2631646394729614,
+          "similarity": 0.4418591482734004,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:7",
+          "distance": 1.2657477855682373,
+          "similarity": 0.44135539108524624,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:3",
+          "distance": 1.2905017137527466,
+          "similarity": 0.43658557162203776,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:4",
+          "distance": 1.3240454196929932,
+          "similarity": 0.43028418959733594,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:6",
+          "distance": 1.3514254093170166,
+          "similarity": 0.42527396192867334,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:5",
+          "distance": 1.377002477645874,
+          "similarity": 0.4206979207654743,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:5",
+          "distance": 1.4474904537200928,
+          "similarity": 0.4085817775019461,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:6",
+          "distance": 1.4874545335769653,
+          "similarity": 0.4020173983087834,
+          "lexical_relevance": 0.0
+        }
+      ],
+      "latency_ms": 6
+    }
+  ],
+  "events": [
+    {
+      "type": "node_status",
+      "stage": "rewrite",
+      "message": "问题改写与拆分开始",
+      "payload": {}
+    },
+    {
+      "type": "node_status",
+      "stage": "rewrite",
+      "message": "问题拆分完成：1 项",
+      "payload": {
+        "query": "六根天线能不能自己拆下来换更强的？",
+        "subquestions": [
+          {
+            "id": "q1",
+            "text": "六根天线能不能自己拆下来换更强的？"
+          }
+        ],
+        "truncated": false
+      }
+    },
+    {
+      "type": "tool_status",
+      "stage": "retrieval",
+      "message": "开始检索 1 个子问题",
+      "payload": {
+        "kb_ids": [
+          "f3d12201-b59f-4c71-a42a-9a9e440d97d6"
+        ],
+        "subquestion_count": 1
+      }
+    },
+    {
+      "type": "error",
+      "stage": "rerank",
+      "message": "千问重排失败（HTTP 403），请检查权限、额度和接口配置",
+      "payload": {}
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "chat",
+      "model": "qwen3.7-plus",
+      "attempt": 1,
+      "latency_ms": 8176,
+      "status": "success",
+      "usage": {
+        "input_tokens": 121,
+        "output_tokens": 564,
+        "total_tokens": 685
+      }
+    },
+    {
+      "stage": "embed_query",
+      "model": "text-embedding-v4",
+      "attempt": 1,
+      "latency_ms": 268,
+      "status": "success"
+    },
+    {
+      "stage": "rerank",
+      "model": "qwen3-rerank",
+      "attempt": 1,
+      "latency_ms": 306,
+      "status": "error",
+      "error_type": "HTTPStatusError",
+      "http_status": 403,
+      "request_id": "3ef88bc4-cc7e-9155-aa64-e4316426e6ef"
+    }
+  ],
+  "latency_ms": 8758,
+  "final_answer": "",
+  "execution_status": "error",
+  "strict_annotated_retrieval": {
+    "hit": false,
+    "covered_groups": [
+      false
+    ],
+    "recall": 0.0,
+    "complete": false
+  },
+  "retrieved_chunk_ids": [],
+  "retrieval_query_count": 0,
+  "chat_call_count": 1,
+  "embedding_call_count": 1
+}

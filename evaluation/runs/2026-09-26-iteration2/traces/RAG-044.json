@@ -1,0 +1,490 @@
+{
+  "case_id": "RAG-044",
+  "question": "电脑插黄色 LAN 口，为什么不能按 2.5G 口来用？",
+  "history": [],
+  "started_at": "2026-09-26T13:28:32.846724+00:00",
+  "calls": [
+    {
+      "stage": "decompose",
+      "output": {
+        "standalone_question": "电脑插黄色 LAN 口，为什么不能按 2.5G 口来用？",
+        "subquestions": [
+          {
+            "id": "q1",
+            "text": "电脑插黄色 LAN 口，为什么不能按 2.5G 口来用？"
+          }
+        ],
+        "truncated": false
+      },
+      "latency_ms": 8973
+    },
+    {
+      "stage": "chat",
+      "input": [
+        {
+          "role": "system",
+          "content": "把当前问题结合对话历史改写为独立问题，并按最少必要原则拆分。只有用户明确询问多个独立属性或任务时才能拆分。尺寸的长宽高属于同一属性，不得拆分；不得把前置条件另拆成问题。保持用户询问的对象和含义，不得补充或替换为其他对象。只输出 JSON 对象，格式为 {\"standalone_question\":\"...\",\"subquestions\":[\"...\"]}。不得回答问题。"
+        },
+        {
+          "role": "user",
+          "content": "对话历史：[]\n当前问题：电脑插黄色 LAN 口，为什么不能按 2.5G 口来用？"
+        }
+      ],
+      "output": "{\n  \"standalone_question\": \"电脑连接黄色 LAN 口时，为什么不能作为 2.5G 接口使用？\",\n  \"subquestions\": []\n}",
+      "latency_ms": 8973
+    },
+    {
+      "stage": "retrieval",
+      "input": {
+        "query": "电脑插黄色 LAN 口，为什么不能按 2.5G 口来用？",
+        "kb_ids": [
+          "f3d12201-b59f-4c71-a42a-9a9e440d97d6"
+        ]
+      },
+      "error_type": "RerankError",
+      "latency_ms": 12321
+    },
+    {
+      "stage": "embedding",
+      "input": "电脑插黄色 LAN 口，为什么不能按 2.5G 口来用？",
+      "output": {
+        "dimension": 1024
+      },
+      "latency_ms": 1720
+    },
+    {
+      "stage": "vector_search",
+      "input": {
+        "kb_ids": [
+          "f3d12201-b59f-4c71-a42a-9a9e440d97d6"
+        ],
+        "requested_k": 140
+      },
+      "output": [
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:4",
+          "distance": 0.5181118249893188,
+          "similarity": 0.6587130035740522,
+          "lexical_relevance": 0.45
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:3",
+          "distance": 0.687895655632019,
+          "similarity": 0.5924536843633015,
+          "lexical_relevance": 0.35
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:10",
+          "distance": 0.7916596531867981,
+          "similarity": 0.5581417197297015,
+          "lexical_relevance": 0.2
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:14",
+          "distance": 0.9497227072715759,
+          "similarity": 0.5128934469863106,
+          "lexical_relevance": 0.05
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:4",
+          "distance": 0.9616794586181641,
+          "similarity": 0.5097672790560873,
+          "lexical_relevance": 0.1
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:8",
+          "distance": 0.9628429412841797,
+          "similarity": 0.5094651125503477,
+          "lexical_relevance": 0.05
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:13",
+          "distance": 0.9708079099655151,
+          "similarity": 0.507406122607605,
+          "lexical_relevance": 0.35
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:10",
+          "distance": 0.9909734129905701,
+          "similarity": 0.5022668778373769,
+          "lexical_relevance": 0.1
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:8",
+          "distance": 0.9921151995658875,
+          "similarity": 0.5019790021269429,
+          "lexical_relevance": 0.1
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:9",
+          "distance": 0.9973181486129761,
+          "similarity": 0.5006713630947794,
+          "lexical_relevance": 0.2
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:7",
+          "distance": 1.0051167011260986,
+          "similarity": 0.49872408894623815,
+          "lexical_relevance": 0.1
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:5",
+          "distance": 1.005121111869812,
+          "similarity": 0.49872299188325925,
+          "lexical_relevance": 0.1
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:13",
+          "distance": 1.0277085304260254,
+          "similarity": 0.4931675262962464,
+          "lexical_relevance": 0.05
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:15",
+          "distance": 1.0352394580841064,
+          "similarity": 0.4913426751962446,
+          "lexical_relevance": 0.4
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:1",
+          "distance": 1.0366299152374268,
+          "similarity": 0.49100722351091547,
+          "lexical_relevance": 0.15
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:7",
+          "distance": 1.040942668914795,
+          "similarity": 0.48996966707140166,
+          "lexical_relevance": 0.05
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:16",
+          "distance": 1.04322350025177,
+          "similarity": 0.4894227185018076,
+          "lexical_relevance": 0.05
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:15",
+          "distance": 1.0556405782699585,
+          "similarity": 0.4864663650693289,
+          "lexical_relevance": 0.2
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:16",
+          "distance": 1.0582863092422485,
+          "similarity": 0.4858410588992096,
+          "lexical_relevance": 0.15
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:11",
+          "distance": 1.0612374544143677,
+          "similarity": 0.48514546340034215,
+          "lexical_relevance": 0.05
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:8",
+          "distance": 1.0638556480407715,
+          "similarity": 0.4845300110738389,
+          "lexical_relevance": 0.1
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:12",
+          "distance": 1.0638926029205322,
+          "similarity": 0.4845213353567622,
+          "lexical_relevance": 0.2
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:17",
+          "distance": 1.070563793182373,
+          "similarity": 0.4829602465244697,
+          "lexical_relevance": 0.3
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:14",
+          "distance": 1.071711778640747,
+          "similarity": 0.4826926266047014,
+          "lexical_relevance": 0.05
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:0",
+          "distance": 1.0754997730255127,
+          "similarity": 0.4818116643502556,
+          "lexical_relevance": 0.1
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:6",
+          "distance": 1.0782219171524048,
+          "similarity": 0.48118056678480586,
+          "lexical_relevance": 0.15
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:7",
+          "distance": 1.0784012079238892,
+          "similarity": 0.48113905832401727,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:16",
+          "distance": 1.0826997756958008,
+          "similarity": 0.4801460160842981,
+          "lexical_relevance": 0.2
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:12",
+          "distance": 1.0887596607208252,
+          "similarity": 0.47875302209489373,
+          "lexical_relevance": 0.2
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:11",
+          "distance": 1.099224328994751,
+          "similarity": 0.47636643029897946,
+          "lexical_relevance": 0.55
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:18",
+          "distance": 1.1045596599578857,
+          "similarity": 0.4751587797800947,
+          "lexical_relevance": 0.05
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:2",
+          "distance": 1.1094770431518555,
+          "similarity": 0.4740511413700238,
+          "lexical_relevance": 0.15
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:10",
+          "distance": 1.110973834991455,
+          "similarity": 0.47371501409634853,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:4",
+          "distance": 1.113472580909729,
+          "similarity": 0.4731549436849364,
+          "lexical_relevance": 0.3
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:15",
+          "distance": 1.118222951889038,
+          "similarity": 0.4720938365379323,
+          "lexical_relevance": 0.2
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:0",
+          "distance": 1.119248390197754,
+          "similarity": 0.4718654050300761,
+          "lexical_relevance": 0.15
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:2",
+          "distance": 1.134831428527832,
+          "similarity": 0.46842105968507053,
+          "lexical_relevance": 0.05
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:0",
+          "distance": 1.14650297164917,
+          "similarity": 0.465874034747641,
+          "lexical_relevance": 0.1
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:17",
+          "distance": 1.1584051847457886,
+          "similarity": 0.4633050397892634,
+          "lexical_relevance": 0.1
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:9",
+          "distance": 1.161729335784912,
+          "similarity": 0.4625926028046918,
+          "lexical_relevance": 0.05
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:9",
+          "distance": 1.1643728017807007,
+          "similarity": 0.4620276133470477,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:3",
+          "distance": 1.1646469831466675,
+          "similarity": 0.4619690913972203,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:14",
+          "distance": 1.1681594848632812,
+          "similarity": 0.4612206837095554,
+          "lexical_relevance": 0.2
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:13",
+          "distance": 1.1686396598815918,
+          "similarity": 0.46111856132641243,
+          "lexical_relevance": 0.25
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:12",
+          "distance": 1.172619104385376,
+          "similarity": 0.46027396057667247,
+          "lexical_relevance": 0.1
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:1",
+          "distance": 1.1735023260116577,
+          "similarity": 0.46008692423853265,
+          "lexical_relevance": 0.1
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:1",
+          "distance": 1.1744999885559082,
+          "similarity": 0.459875835945211,
+          "lexical_relevance": 0.2
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:17",
+          "distance": 1.1916186809539795,
+          "similarity": 0.4562837544187726,
+          "lexical_relevance": 0.05
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:11",
+          "distance": 1.2091772556304932,
+          "similarity": 0.4526572041475245,
+          "lexical_relevance": 0.1
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:2",
+          "distance": 1.2248404026031494,
+          "similarity": 0.44947044238767025,
+          "lexical_relevance": 0.1
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:6",
+          "distance": 1.3261518478393555,
+          "similarity": 0.42989454920101167,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:5",
+          "distance": 1.3263378143310547,
+          "similarity": 0.4298601836068907,
+          "lexical_relevance": 0.15
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:6",
+          "distance": 1.3767869472503662,
+          "similarity": 0.4207360702467969,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:3",
+          "distance": 1.3812167644500732,
+          "similarity": 0.4199533679290821,
+          "lexical_relevance": 0.05
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:5",
+          "distance": 1.3886198997497559,
+          "similarity": 0.41865179139835734,
+          "lexical_relevance": 0.0
+        }
+      ],
+      "latency_ms": 8
+    }
+  ],
+  "events": [
+    {
+      "type": "node_status",
+      "stage": "rewrite",
+      "message": "问题改写与拆分开始",
+      "payload": {}
+    },
+    {
+      "type": "node_status",
+      "stage": "rewrite",
+      "message": "问题拆分完成：1 项",
+      "payload": {
+        "query": "电脑插黄色 LAN 口，为什么不能按 2.5G 口来用？",
+        "subquestions": [
+          {
+            "id": "q1",
+            "text": "电脑插黄色 LAN 口，为什么不能按 2.5G 口来用？"
+          }
+        ],
+        "truncated": false
+      }
+    },
+    {
+      "type": "tool_status",
+      "stage": "retrieval",
+      "message": "开始检索 1 个子问题",
+      "payload": {
+        "kb_ids": [
+          "f3d12201-b59f-4c71-a42a-9a9e440d97d6"
+        ],
+        "subquestion_count": 1
+      }
+    },
+    {
+      "type": "error",
+      "stage": "rerank",
+      "message": "千问重排失败，请检查网络连接或超时后重试（ConnectTimeout）",
+      "payload": {}
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "chat",
+      "model": "qwen3.7-plus",
+      "attempt": 1,
+      "latency_ms": 8973,
+      "status": "success",
+      "usage": {
+        "input_tokens": 131,
+        "output_tokens": 619,
+        "total_tokens": 750
+      }
+    },
+    {
+      "stage": "embed_query",
+      "model": "text-embedding-v4",
+      "attempt": 1,
+      "latency_ms": 1720,
+      "status": "success"
+    },
+    {
+      "stage": "rerank",
+      "model": "qwen3-rerank",
+      "attempt": 1,
+      "latency_ms": 5046,
+      "status": "error",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "stage": "rerank",
+      "model": "qwen3-rerank",
+      "attempt": 2,
+      "latency_ms": 5047,
+      "status": "error",
+      "error_type": "ConnectTimeout"
+    }
+  ],
+  "latency_ms": 21297,
+  "final_answer": "",
+  "execution_status": "error",
+  "strict_annotated_retrieval": {
+    "hit": false,
+    "covered_groups": [
+      false
+    ],
+    "recall": 0.0,
+    "complete": false
+  },
+  "retrieved_chunk_ids": [],
+  "retrieval_query_count": 0,
+  "chat_call_count": 1,
+  "embedding_call_count": 1
+}

@@ -1,0 +1,490 @@
+{
+  "case_id": "RAG-038",
+  "question": "USB 口能接打印机吗？",
+  "history": [],
+  "started_at": "2026-09-26T09:09:11.878841+00:00",
+  "calls": [
+    {
+      "stage": "decompose",
+      "output": {
+        "standalone_question": "USB 口能接打印机吗？",
+        "subquestions": [
+          {
+            "id": "q1",
+            "text": "USB 口能接打印机吗？"
+          }
+        ],
+        "truncated": false
+      },
+      "latency_ms": 6337
+    },
+    {
+      "stage": "chat",
+      "input": [
+        {
+          "role": "system",
+          "content": "把当前问题结合对话历史改写为独立问题，并按最少必要原则拆分。只有用户明确询问多个独立属性或任务时才能拆分。尺寸的长宽高属于同一属性，不得拆分；不得把前置条件另拆成问题。保持用户询问的对象和含义，不得补充或替换为其他对象。只输出 JSON 对象，格式为 {\"standalone_question\":\"...\",\"subquestions\":[\"...\"]}。不得回答问题。"
+        },
+        {
+          "role": "user",
+          "content": "对话历史：[]\n当前问题：USB 口能接打印机吗？"
+        }
+      ],
+      "output": "{\"standalone_question\":\"USB 口能接打印机吗？\",\"subquestions\":[]}",
+      "latency_ms": 6337
+    },
+    {
+      "stage": "retrieval",
+      "input": {
+        "query": "USB 口能接打印机吗？",
+        "kb_ids": [
+          "f3d12201-b59f-4c71-a42a-9a9e440d97d6"
+        ]
+      },
+      "error_type": "RerankError",
+      "latency_ms": 12342
+    },
+    {
+      "stage": "embedding",
+      "input": "USB 口能接打印机吗？",
+      "output": {
+        "dimension": 1024
+      },
+      "latency_ms": 1725
+    },
+    {
+      "stage": "vector_search",
+      "input": {
+        "kb_ids": [
+          "f3d12201-b59f-4c71-a42a-9a9e440d97d6"
+        ],
+        "requested_k": 140
+      },
+      "output": [
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:14",
+          "distance": 0.7545573115348816,
+          "similarity": 0.5699443349189904,
+          "lexical_relevance": 0.6666666666666666
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:4",
+          "distance": 0.8046298027038574,
+          "similarity": 0.5541302700984494,
+          "lexical_relevance": 0.5555555555555556
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:3",
+          "distance": 0.8678253889083862,
+          "similarity": 0.5353819505496873,
+          "lexical_relevance": 0.4444444444444444
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:10",
+          "distance": 1.0544898509979248,
+          "similarity": 0.48673883665780643,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:10",
+          "distance": 1.0825004577636719,
+          "similarity": 0.48019197127757984,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:7",
+          "distance": 1.115823745727539,
+          "similarity": 0.47262916016482454,
+          "lexical_relevance": 0.4444444444444444
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:13",
+          "distance": 1.1177812814712524,
+          "similarity": 0.4721922932972974,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:15",
+          "distance": 1.120465636253357,
+          "similarity": 0.47159453230607234,
+          "lexical_relevance": 1.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:13",
+          "distance": 1.143411636352539,
+          "similarity": 0.46654594154471796,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:1",
+          "distance": 1.1588993072509766,
+          "similarity": 0.4631989998983996,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:18",
+          "distance": 1.177747130393982,
+          "similarity": 0.45919013555035076,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:0",
+          "distance": 1.1796212196350098,
+          "similarity": 0.4587953131450316,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:14",
+          "distance": 1.1804161071777344,
+          "similarity": 0.4586280557679287,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:16",
+          "distance": 1.2095682621002197,
+          "similarity": 0.45257710166849,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:12",
+          "distance": 1.2259480953216553,
+          "similarity": 0.44924677358907483,
+          "lexical_relevance": 0.1111111111111111
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:16",
+          "distance": 1.2304925918579102,
+          "similarity": 0.44833145989830003,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:0",
+          "distance": 1.234071969985962,
+          "similarity": 0.44761315366500193,
+          "lexical_relevance": 0.5555555555555556
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:7",
+          "distance": 1.234830617904663,
+          "similarity": 0.4474612044368633,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:5",
+          "distance": 1.2359445095062256,
+          "similarity": 0.4472382904622418,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:15",
+          "distance": 1.2377245426177979,
+          "similarity": 0.446882527744077,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:12",
+          "distance": 1.2423272132873535,
+          "similarity": 0.44596524275061294,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:7",
+          "distance": 1.2427289485931396,
+          "similarity": 0.4458853579373907,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:6",
+          "distance": 1.2479488849639893,
+          "similarity": 0.4448499726523005,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:11",
+          "distance": 1.2696897983551025,
+          "similarity": 0.44058884201917087,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:4",
+          "distance": 1.2715827226638794,
+          "similarity": 0.4402216965390996,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:10",
+          "distance": 1.2765471935272217,
+          "similarity": 0.43926170423492367,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:16",
+          "distance": 1.2803666591644287,
+          "similarity": 0.4385259694887925,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:8",
+          "distance": 1.2824217081069946,
+          "similarity": 0.4381311290757853,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:0",
+          "distance": 1.2836365699768066,
+          "similarity": 0.43789804960522083,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:17",
+          "distance": 1.2867909669876099,
+          "similarity": 0.43729401350456626,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:17",
+          "distance": 1.2902719974517822,
+          "similarity": 0.4366293615398637,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:13",
+          "distance": 1.2981514930725098,
+          "similarity": 0.4351323239631395,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:9",
+          "distance": 1.298271894454956,
+          "similarity": 0.43510952834288297,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:2",
+          "distance": 1.3047733306884766,
+          "similarity": 0.43388214653684937,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:8",
+          "distance": 1.3117988109588623,
+          "similarity": 0.4325635930166566,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:9",
+          "distance": 1.3146668672561646,
+          "similarity": 0.43202761232998194,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:15",
+          "distance": 1.3252110481262207,
+          "similarity": 0.43006848810814546,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:1",
+          "distance": 1.3292953968048096,
+          "similarity": 0.42931437608632256,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:2",
+          "distance": 1.3300487995147705,
+          "similarity": 0.429175560704243,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:4",
+          "distance": 1.3314685821533203,
+          "similarity": 0.4289142078322198,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:12",
+          "distance": 1.3326994180679321,
+          "similarity": 0.42868789362851306,
+          "lexical_relevance": 0.2222222222222222
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:11",
+          "distance": 1.3488103151321411,
+          "similarity": 0.4257474490628424,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:11",
+          "distance": 1.3511112928390503,
+          "similarity": 0.4253307799787157,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:17",
+          "distance": 1.3540223836898804,
+          "similarity": 0.42480479664450815,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:8",
+          "distance": 1.3563823699951172,
+          "similarity": 0.42437934213625617,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:9",
+          "distance": 1.3620760440826416,
+          "similarity": 0.4233563955339844,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:3",
+          "distance": 1.3642194271087646,
+          "similarity": 0.42297258390390324,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:2",
+          "distance": 1.3711721897125244,
+          "similarity": 0.42173234164037565,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:1",
+          "distance": 1.4039965867996216,
+          "similarity": 0.41597396830387107,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:14",
+          "distance": 1.40792977809906,
+          "similarity": 0.4152945028112281,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:6",
+          "distance": 1.4679827690124512,
+          "similarity": 0.4051892146719258,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:5",
+          "distance": 1.4716219902038574,
+          "similarity": 0.4045926132569814,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:5",
+          "distance": 1.5025839805603027,
+          "similarity": 0.39958698999428194,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:6",
+          "distance": 1.5506176948547363,
+          "similarity": 0.39206189230838545,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:3",
+          "distance": 1.6972949504852295,
+          "similarity": 0.3707418055337645,
+          "lexical_relevance": 0.0
+        }
+      ],
+      "latency_ms": 6
+    }
+  ],
+  "events": [
+    {
+      "type": "node_status",
+      "stage": "rewrite",
+      "message": "问题改写与拆分开始",
+      "payload": {}
+    },
+    {
+      "type": "node_status",
+      "stage": "rewrite",
+      "message": "问题拆分完成：1 项",
+      "payload": {
+        "query": "USB 口能接打印机吗？",
+        "subquestions": [
+          {
+            "id": "q1",
+            "text": "USB 口能接打印机吗？"
+          }
+        ],
+        "truncated": false
+      }
+    },
+    {
+      "type": "tool_status",
+      "stage": "retrieval",
+      "message": "开始检索 1 个子问题",
+      "payload": {
+        "kb_ids": [
+          "f3d12201-b59f-4c71-a42a-9a9e440d97d6"
+        ],
+        "subquestion_count": 1
+      }
+    },
+    {
+      "type": "error",
+      "stage": "rerank",
+      "message": "千问重排失败，请检查网络连接或超时后重试（ConnectTimeout）",
+      "payload": {}
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "chat",
+      "model": "qwen3.7-plus",
+      "attempt": 1,
+      "latency_ms": 6336,
+      "status": "success",
+      "usage": {
+        "input_tokens": 119,
+        "output_tokens": 295,
+        "total_tokens": 414
+      }
+    },
+    {
+      "stage": "embed_query",
+      "model": "text-embedding-v4",
+      "attempt": 1,
+      "latency_ms": 1724,
+      "status": "success"
+    },
+    {
+      "stage": "rerank",
+      "model": "qwen3-rerank",
+      "attempt": 1,
+      "latency_ms": 5071,
+      "status": "error",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "stage": "rerank",
+      "model": "qwen3-rerank",
+      "attempt": 2,
+      "latency_ms": 5039,
+      "status": "error",
+      "error_type": "ConnectTimeout"
+    }
+  ],
+  "latency_ms": 18684,
+  "final_answer": "",
+  "execution_status": "error",
+  "strict_annotated_retrieval": {
+    "hit": false,
+    "covered_groups": [
+      false
+    ],
+    "recall": 0.0,
+    "complete": false
+  },
+  "retrieved_chunk_ids": [],
+  "retrieval_query_count": 0,
+  "chat_call_count": 1,
+  "embedding_call_count": 1
+}

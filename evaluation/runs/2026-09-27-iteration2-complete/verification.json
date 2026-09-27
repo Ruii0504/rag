@@ -1,0 +1,11 @@
+{
+  "verified_at": "2026-09-26T21:22:50.949145+00:00",
+  "cases": 100,
+  "application_source_files_unchanged": 16,
+  "dataset_snapshot_rubric_unchanged": true,
+  "trace_score_metrics_consistent": true,
+  "final_execution_errors": [],
+  "composite_result_set": true,
+  "inherited_success_cases": 47,
+  "fixed_code_execution_cases": 53
+}

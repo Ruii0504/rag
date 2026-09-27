@@ -1,0 +1,93 @@
+{
+  "model": "qwen3-rerank",
+  "rerank_source_sha256": "581f4c3b085299858cd525a8f8e887bc5be9d3a5126ec2f2cf0e812134c1d95b",
+  "scope": "synthetic two-document rerank only; not 100-case regression",
+  "probes": [
+    {
+      "probe": 1,
+      "started_at": "2026-09-26T13:42:44.976080+00:00",
+      "status": "success",
+      "passed": true,
+      "results": [
+        {
+          "index": 0,
+          "score": 0.6582365817980531
+        },
+        {
+          "index": 1,
+          "score": 0.19530905663942494
+        }
+      ],
+      "latency_ms": 2681,
+      "attempts": [
+        {
+          "stage": "rerank",
+          "model": "qwen3-rerank",
+          "attempt": 1,
+          "latency_ms": 2681,
+          "status": "success",
+          "request_id": "fb5817af-999c-91f5-9d46-e3c6c914a7cf",
+          "usage": {
+            "total_tokens": 63
+          }
+        }
+      ]
+    },
+    {
+      "probe": 2,
+      "started_at": "2026-09-26T13:42:47.660147+00:00",
+      "status": "error",
+      "passed": false,
+      "error": "千问重排失败，请检查网络连接或超时后重试（ConnectTimeout）",
+      "latency_ms": 60582,
+      "attempts": [
+        {
+          "stage": "rerank",
+          "model": "qwen3-rerank",
+          "attempt": 1,
+          "latency_ms": 30043,
+          "status": "error",
+          "error_type": "ConnectTimeout"
+        },
+        {
+          "stage": "rerank",
+          "model": "qwen3-rerank",
+          "attempt": 2,
+          "latency_ms": 30038,
+          "status": "error",
+          "error_type": "ConnectTimeout"
+        }
+      ]
+    },
+    {
+      "probe": 3,
+      "started_at": "2026-09-26T13:43:48.242672+00:00",
+      "status": "success",
+      "passed": true,
+      "results": [
+        {
+          "index": 0,
+          "score": 0.6582365817980531
+        },
+        {
+          "index": 1,
+          "score": 0.19530905663942494
+        }
+      ],
+      "latency_ms": 8150,
+      "attempts": [
+        {
+          "stage": "rerank",
+          "model": "qwen3-rerank",
+          "attempt": 1,
+          "latency_ms": 8150,
+          "status": "success",
+          "request_id": "19252fb1-4585-9606-81a0-f728f2111317",
+          "usage": {
+            "total_tokens": 63
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import unittest
 import logging
-from run_regression import Observer, ModelCallRecorder, coverage
+from run_regression import Observer, ModelCallRecorder, coverage, should_stop_after_error
 
 
 class RunnerTests(unittest.TestCase):
@@ -26,6 +26,10 @@ class RunnerTests(unittest.TestCase):
 
     def test_refusal_excluded(self):
         self.assertIsNone(coverage({"expected_behavior": "refuse", "evidence_groups": []}, set()))
+
+    def test_continue_on_errors_only_disables_batch_stop(self):
+        self.assertTrue(should_stop_after_error(3, False))
+        self.assertFalse(should_stop_after_error(3, True))
 
     def test_observer_preserves_return_and_records(self):
         class Target:

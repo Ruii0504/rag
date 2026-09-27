@@ -1,0 +1,153 @@
+{
+  "cases": 100,
+  "completed": 100,
+  "scored_output_count": 100,
+  "overall_pass_count": 88,
+  "score_means": {
+    "accuracy": 4.88,
+    "relevance": 4.97,
+    "completeness": 4.94,
+    "fluency": 4.98,
+    "safety": 4.89
+  },
+  "score_distribution": {
+    "accuracy": {
+      "3": 5,
+      "4": 2,
+      "5": 93
+    },
+    "relevance": {
+      "4": 3,
+      "5": 97
+    },
+    "completeness": {
+      "4": 6,
+      "5": 94
+    },
+    "fluency": {
+      "4": 2,
+      "5": 98
+    },
+    "safety": {
+      "2": 3,
+      "3": 1,
+      "5": 96
+    }
+  },
+  "strict_retrieval": {
+    "denominator": 93,
+    "hit_count": 91,
+    "macro_evidence_group_recall": 0.9623655913978495,
+    "complete_count": 88,
+    "retrieval_reached_only": {
+      "denominator": 93,
+      "hit_count": 91,
+      "macro_evidence_group_recall": 0.9623655913978495,
+      "complete_count": 88
+    }
+  },
+  "reviewed_retrieval": {
+    "denominator": 93,
+    "hit_count": 91,
+    "macro_evidence_group_recall": 0.9623655913978495,
+    "complete_count": 88,
+    "retrieval_reached_only": {
+      "denominator": 93,
+      "hit_count": 91,
+      "macro_evidence_group_recall": 0.9623655913978495,
+      "complete_count": 88
+    }
+  },
+  "raw_pool_coverage": {
+    "denominator": 93,
+    "hit_count": 93,
+    "macro_evidence_group_recall": 1.0,
+    "complete_count": 93,
+    "retrieval_reached_only": {
+      "denominator": 93,
+      "hit_count": 93,
+      "macro_evidence_group_recall": 1.0,
+      "complete_count": 93
+    }
+  },
+  "failure_stages": {
+    "generation": 9,
+    "source_conflict": 3
+  },
+  "unsupported_claim_case_ids": [
+    "RAG-006",
+    "RAG-013",
+    "RAG-029"
+  ],
+  "safety_score_below_5_ids": [
+    "RAG-015",
+    "RAG-016",
+    "RAG-029",
+    "RAG-100"
+  ],
+  "safety_score_at_most_2_ids": [
+    "RAG-015",
+    "RAG-016",
+    "RAG-100"
+  ],
+  "chat_calls": 394,
+  "embedding_calls": 102,
+  "latency_seconds": {
+    "sum": 4833.52,
+    "median": 47.673,
+    "p95_nearest_rank": 66.999
+  },
+  "by_tier": {
+    "core": {
+      "count": 60,
+      "passed": 51,
+      "scored_count": 60,
+      "score_means": {
+        "accuracy": 4.8,
+        "relevance": 4.95,
+        "completeness": 4.95,
+        "fluency": 4.983333333333333,
+        "safety": 4.866666666666666
+      }
+    },
+    "edge": {
+      "count": 30,
+      "passed": 29,
+      "scored_count": 30,
+      "score_means": {
+        "accuracy": 5,
+        "relevance": 5,
+        "completeness": 4.966666666666667,
+        "fluency": 4.966666666666667,
+        "safety": 5
+      }
+    },
+    "high_risk": {
+      "count": 10,
+      "passed": 8,
+      "scored_count": 10,
+      "score_means": {
+        "accuracy": 5,
+        "relevance": 5,
+        "completeness": 4.8,
+        "fluency": 5,
+        "safety": 4.7
+      }
+    }
+  },
+  "equivalent_evidence_additions": 0,
+  "partial_answer_cases": {
+    "denominator": 3,
+    "passed": 3
+  },
+  "single_query_hit_at_7": {
+    "denominator": 91,
+    "strict_hit_count": 89,
+    "reviewed_hit_count": 89
+  },
+  "scoring_integrity": {
+    "rubric_sha256": "0202019be9c8343d69f391c8d71c5b56a8a0ce65aee54d095938a7dde3776fb3",
+    "annotations_sha256": "59bc7d083aa084f84e429660915f2a456a3dbfc8732457d4e112cbc88188b1dc",
+    "dataset_sha256": "160bd79172e08ed9f3f69acc491d7b58d0124be4d2b4034c5c72bedfe2c081fd"
+  }
+}

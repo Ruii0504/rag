@@ -1,0 +1,21 @@
+{
+  "result_kind": "composite_final_result_set",
+  "source_run": "evaluation/runs/2026-09-26-iteration2",
+  "source_manifest_sha256": "68abf67c3685ddf70e8cac44471b5498bc0d7ae9fc12c7bde5ba4053de737b37",
+  "inherited_success_case_ids": [
+    "RAG-001", "RAG-002", "RAG-004", "RAG-005", "RAG-006", "RAG-007", "RAG-008", "RAG-009", "RAG-010", "RAG-011",
+    "RAG-012", "RAG-013", "RAG-014", "RAG-015", "RAG-016", "RAG-017", "RAG-018", "RAG-019", "RAG-020", "RAG-021",
+    "RAG-022", "RAG-023", "RAG-024", "RAG-025", "RAG-026", "RAG-027", "RAG-028", "RAG-029", "RAG-031", "RAG-032",
+    "RAG-033", "RAG-034", "RAG-035", "RAG-039", "RAG-040", "RAG-042", "RAG-043", "RAG-045", "RAG-046", "RAG-047",
+    "RAG-049", "RAG-051", "RAG-052", "RAG-053", "RAG-055", "RAG-058", "RAG-060"
+  ],
+  "executed_with_fixed_code_case_ids": [
+    "RAG-003", "RAG-030", "RAG-036", "RAG-037", "RAG-038", "RAG-041", "RAG-044", "RAG-048", "RAG-050", "RAG-054",
+    "RAG-056", "RAG-057", "RAG-059", "RAG-061", "RAG-062", "RAG-063", "RAG-064", "RAG-065", "RAG-066", "RAG-067",
+    "RAG-068", "RAG-069", "RAG-070", "RAG-071", "RAG-072", "RAG-073", "RAG-074", "RAG-075", "RAG-076", "RAG-077",
+    "RAG-078", "RAG-079", "RAG-080", "RAG-081", "RAG-082", "RAG-083", "RAG-084", "RAG-085", "RAG-086", "RAG-087",
+    "RAG-088", "RAG-089", "RAG-090", "RAG-091", "RAG-092", "RAG-093", "RAG-094", "RAG-095", "RAG-096", "RAG-097",
+    "RAG-098", "RAG-099", "RAG-100"
+  ],
+  "scoring_source": "Only the 100 final traces in this directory; no prior score file was copied or imported."
+}

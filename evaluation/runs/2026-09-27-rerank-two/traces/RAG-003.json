@@ -1,0 +1,485 @@
+{
+  "case_id": "RAG-003",
+  "question": "手机明明连上了 Nebula_AX6000，却显示无互联网怎么办？",
+  "history": [],
+  "started_at": "2026-09-26T16:32:08.313885+00:00",
+  "calls": [
+    {
+      "stage": "decompose",
+      "output": {
+        "standalone_question": "手机明明连上了 Nebula_AX6000，却显示无互联网怎么办？",
+        "subquestions": [
+          {
+            "id": "q1",
+            "text": "手机明明连上了 Nebula_AX6000，却显示无互联网怎么办？"
+          }
+        ],
+        "truncated": false
+      },
+      "latency_ms": 14329
+    },
+    {
+      "stage": "chat",
+      "input": [
+        {
+          "role": "system",
+          "content": "把当前问题结合对话历史改写为独立问题，并按最少必要原则拆分。只有用户明确询问多个独立属性或任务时才能拆分。尺寸的长宽高属于同一属性，不得拆分；不得把前置条件另拆成问题。保持用户询问的对象和含义，不得补充或替换为其他对象。只输出 JSON 对象，格式为 {\"standalone_question\":\"...\",\"subquestions\":[\"...\"]}。不得回答问题。"
+        },
+        {
+          "role": "user",
+          "content": "对话历史：[]\n当前问题：手机明明连上了 Nebula_AX6000，却显示无互联网怎么办？"
+        }
+      ],
+      "output": "{\n  \"standalone_question\": \"手机连接 Nebula_AX6000 后显示无互联网怎么办？\",\n  \"subquestions\": []\n}",
+      "latency_ms": 14329
+    },
+    {
+      "stage": "retrieval",
+      "input": {
+        "query": "手机明明连上了 Nebula_AX6000，却显示无互联网怎么办？",
+        "kb_ids": [
+          "f3d12201-b59f-4c71-a42a-9a9e440d97d6"
+        ]
+      },
+      "error_type": "RerankError",
+      "latency_ms": 907
+    },
+    {
+      "stage": "embedding",
+      "input": "手机明明连上了 Nebula_AX6000，却显示无互联网怎么办？",
+      "output": {
+        "dimension": 1024
+      },
+      "latency_ms": 285
+    },
+    {
+      "stage": "vector_search",
+      "input": {
+        "kb_ids": [
+          "f3d12201-b59f-4c71-a42a-9a9e440d97d6"
+        ],
+        "requested_k": 140
+      },
+      "output": [
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:12",
+          "distance": 0.5856137871742249,
+          "similarity": 0.6306706009299612,
+          "lexical_relevance": 0.4074074074074074
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:13",
+          "distance": 0.5906403064727783,
+          "similarity": 0.6286776437958406,
+          "lexical_relevance": 0.3333333333333333
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:2",
+          "distance": 0.6149642467498779,
+          "similarity": 0.6192087546287814,
+          "lexical_relevance": 0.37037037037037035
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:16",
+          "distance": 0.6214460134506226,
+          "similarity": 0.6167334537841846,
+          "lexical_relevance": 0.2222222222222222
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:11",
+          "distance": 0.6264782547950745,
+          "similarity": 0.6148253117137391,
+          "lexical_relevance": 0.5185185185185185
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:17",
+          "distance": 0.6266165375709534,
+          "similarity": 0.6147730438627609,
+          "lexical_relevance": 0.4074074074074074
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:5",
+          "distance": 0.6412388682365417,
+          "similarity": 0.6092958309441378,
+          "lexical_relevance": 0.4444444444444444
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:15",
+          "distance": 0.6444617509841919,
+          "similarity": 0.6081017082954415,
+          "lexical_relevance": 0.4074074074074074
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:6",
+          "distance": 0.645906388759613,
+          "similarity": 0.6075679679168263,
+          "lexical_relevance": 0.37037037037037035
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:17",
+          "distance": 0.6476907730102539,
+          "similarity": 0.6069099957227089,
+          "lexical_relevance": 0.2222222222222222
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:15",
+          "distance": 0.6573431491851807,
+          "similarity": 0.6033753483650274,
+          "lexical_relevance": 0.4074074074074074
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:12",
+          "distance": 0.6587198972702026,
+          "similarity": 0.6028745429808404,
+          "lexical_relevance": 0.2962962962962963
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:11",
+          "distance": 0.6590840816497803,
+          "similarity": 0.6027422064140401,
+          "lexical_relevance": 0.37037037037037035
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:0",
+          "distance": 0.6603949069976807,
+          "similarity": 0.6022663619272333,
+          "lexical_relevance": 0.18518518518518517
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:18",
+          "distance": 0.6828480362892151,
+          "similarity": 0.5942307198486337,
+          "lexical_relevance": 0.18518518518518517
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:10",
+          "distance": 0.6855137348175049,
+          "similarity": 0.5932909233209379,
+          "lexical_relevance": 0.25925925925925924
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:16",
+          "distance": 0.6856071949005127,
+          "similarity": 0.5932580277453203,
+          "lexical_relevance": 0.18518518518518517
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:0",
+          "distance": 0.6891178488731384,
+          "similarity": 0.5920250032684992,
+          "lexical_relevance": 0.25925925925925924
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:17",
+          "distance": 0.6998831033706665,
+          "similarity": 0.5882757455598674,
+          "lexical_relevance": 0.2962962962962963
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:13",
+          "distance": 0.7008700370788574,
+          "similarity": 0.587934397220284,
+          "lexical_relevance": 0.3333333333333333
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:12",
+          "distance": 0.7350130677223206,
+          "similarity": 0.5763645350019027,
+          "lexical_relevance": 0.2962962962962963
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:16",
+          "distance": 0.7415451407432556,
+          "similarity": 0.5742027447954755,
+          "lexical_relevance": 0.2222222222222222
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:15",
+          "distance": 0.7518759965896606,
+          "similarity": 0.5708166570845645,
+          "lexical_relevance": 0.25925925925925924
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:14",
+          "distance": 0.7566742897033691,
+          "similarity": 0.5692574917623797,
+          "lexical_relevance": 0.2222222222222222
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:13",
+          "distance": 0.7698050737380981,
+          "similarity": 0.5650339773791289,
+          "lexical_relevance": 0.18518518518518517
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:14",
+          "distance": 0.7897554636001587,
+          "similarity": 0.55873554814492,
+          "lexical_relevance": 0.2222222222222222
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:0",
+          "distance": 0.8081533312797546,
+          "similarity": 0.5530504425154205,
+          "lexical_relevance": 0.25925925925925924
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:14",
+          "distance": 0.8201455473899841,
+          "similarity": 0.5494066128030036,
+          "lexical_relevance": 0.18518518518518517
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:2",
+          "distance": 0.8210045099258423,
+          "similarity": 0.5491474593002098,
+          "lexical_relevance": 0.25925925925925924
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:10",
+          "distance": 0.8412142992019653,
+          "similarity": 0.543119831533694,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:1",
+          "distance": 0.853522777557373,
+          "similarity": 0.5395131973062827,
+          "lexical_relevance": 0.18518518518518517
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:8",
+          "distance": 0.9172808527946472,
+          "similarity": 0.5215719953299436,
+          "lexical_relevance": 0.1111111111111111
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:7",
+          "distance": 0.9273732900619507,
+          "similarity": 0.5188408520322794,
+          "lexical_relevance": 0.14814814814814814
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:9",
+          "distance": 0.9344314932823181,
+          "similarity": 0.5169477458740155,
+          "lexical_relevance": 0.18518518518518517
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:9",
+          "distance": 0.9620275497436523,
+          "similarity": 0.5096768392118931,
+          "lexical_relevance": 0.07407407407407407
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:7",
+          "distance": 0.970185399055481,
+          "similarity": 0.5075664455128975,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:9",
+          "distance": 0.999103307723999,
+          "similarity": 0.5002242736212121,
+          "lexical_relevance": 0.037037037037037035
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:1",
+          "distance": 1.004806399345398,
+          "similarity": 0.49880128092493936,
+          "lexical_relevance": 0.2222222222222222
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:11",
+          "distance": 1.0115554332733154,
+          "similarity": 0.49712773680452055,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:8",
+          "distance": 1.0182849168777466,
+          "similarity": 0.49547018443113744,
+          "lexical_relevance": 0.18518518518518517
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:10",
+          "distance": 1.0259038209915161,
+          "similarity": 0.4936068482809716,
+          "lexical_relevance": 0.07407407407407407
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:1",
+          "distance": 1.0312836170196533,
+          "similarity": 0.4922995447909058,
+          "lexical_relevance": 0.07407407407407407
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:4",
+          "distance": 1.0821547508239746,
+          "similarity": 0.4802716991156725,
+          "lexical_relevance": 0.18518518518518517
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:4",
+          "distance": 1.1192656755447388,
+          "similarity": 0.47186155635864707,
+          "lexical_relevance": 0.037037037037037035
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:7",
+          "distance": 1.1306886672973633,
+          "similarity": 0.46933182465762746,
+          "lexical_relevance": 0.037037037037037035
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:3",
+          "distance": 1.1395472288131714,
+          "similarity": 0.46738860752081185,
+          "lexical_relevance": 0.18518518518518517
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:5",
+          "distance": 1.1448330879211426,
+          "similarity": 0.46623674617461247,
+          "lexical_relevance": 0.18518518518518517
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:2",
+          "distance": 1.1470153331756592,
+          "similarity": 0.4657628590480981,
+          "lexical_relevance": 0.14814814814814814
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:6",
+          "distance": 1.1478395462036133,
+          "similarity": 0.46558412697426,
+          "lexical_relevance": 0.037037037037037035
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:8",
+          "distance": 1.1679483652114868,
+          "similarity": 0.4612655984094199,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:4",
+          "distance": 1.1703170537948608,
+          "similarity": 0.46076217216810406,
+          "lexical_relevance": 0.07407407407407407
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:5",
+          "distance": 1.1836858987808228,
+          "similarity": 0.4579413186476643,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:6",
+          "distance": 1.2415251731872559,
+          "similarity": 0.4461248135697205,
+          "lexical_relevance": 0.037037037037037035
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:3",
+          "distance": 1.2849135398864746,
+          "similarity": 0.4376533214686472,
+          "lexical_relevance": 0.037037037037037035
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:3",
+          "distance": 1.3173960447311401,
+          "similarity": 0.43151881711096046,
+          "lexical_relevance": 0.0
+        }
+      ],
+      "latency_ms": 209
+    }
+  ],
+  "events": [
+    {
+      "type": "node_status",
+      "stage": "rewrite",
+      "message": "问题改写与拆分开始",
+      "payload": {}
+    },
+    {
+      "type": "node_status",
+      "stage": "rewrite",
+      "message": "问题拆分完成：1 项",
+      "payload": {
+        "query": "手机明明连上了 Nebula_AX6000，却显示无互联网怎么办？",
+        "subquestions": [
+          {
+            "id": "q1",
+            "text": "手机明明连上了 Nebula_AX6000，却显示无互联网怎么办？"
+          }
+        ],
+        "truncated": false
+      }
+    },
+    {
+      "type": "tool_status",
+      "stage": "retrieval",
+      "message": "开始检索 1 个子问题",
+      "payload": {
+        "kb_ids": [
+          "f3d12201-b59f-4c71-a42a-9a9e440d97d6"
+        ],
+        "subquestion_count": 1
+      }
+    },
+    {
+      "type": "error",
+      "stage": "rerank",
+      "message": "千问重排失败（HTTP 403），请检查权限、额度和接口配置",
+      "payload": {}
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "chat",
+      "model": "qwen3.7-plus",
+      "attempt": 1,
+      "latency_ms": 14329,
+      "status": "success",
+      "usage": {
+        "input_tokens": 129,
+        "output_tokens": 796,
+        "total_tokens": 925
+      }
+    },
+    {
+      "stage": "embed_query",
+      "model": "text-embedding-v4",
+      "attempt": 1,
+      "latency_ms": 285,
+      "status": "success"
+    },
+    {
+      "stage": "rerank",
+      "model": "qwen3-rerank",
+      "attempt": 1,
+      "latency_ms": 412,
+      "status": "error",
+      "error_type": "HTTPStatusError",
+      "http_status": 403,
+      "request_id": "0e89c412-640d-9d2a-a95c-5742cc225c21"
+    }
+  ],
+  "latency_ms": 15245,
+  "final_answer": "",
+  "execution_status": "error",
+  "strict_annotated_retrieval": {
+    "hit": false,
+    "covered_groups": [
+      false,
+      false
+    ],
+    "recall": 0.0,
+    "complete": false
+  },
+  "retrieved_chunk_ids": [],
+  "retrieval_query_count": 0,
+  "chat_call_count": 1,
+  "embedding_call_count": 1
+}

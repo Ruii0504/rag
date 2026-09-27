@@ -1,0 +1,97 @@
+{
+  "model": "qwen3-rerank",
+  "rerank_source_sha256": "581f4c3b085299858cd525a8f8e887bc5be9d3a5126ec2f2cf0e812134c1d95b",
+  "scope": "synthetic two-document rerank only; not 100-case regression",
+  "probes": [
+    {
+      "probe": 1,
+      "started_at": "2026-09-26T13:52:54.714604+00:00",
+      "status": "success",
+      "passed": true,
+      "results": [
+        {
+          "index": 0,
+          "score": 0.6582365965535861
+        },
+        {
+          "index": 1,
+          "score": 0.19530905663942494
+        }
+      ],
+      "latency_ms": 483,
+      "attempts": [
+        {
+          "stage": "rerank",
+          "model": "qwen3-rerank",
+          "attempt": 1,
+          "latency_ms": 483,
+          "status": "success",
+          "request_id": "2da8617a-b749-9e6c-b5eb-da6cedd3139b",
+          "usage": {
+            "total_tokens": 63
+          }
+        }
+      ]
+    },
+    {
+      "probe": 2,
+      "started_at": "2026-09-26T13:52:55.199440+00:00",
+      "status": "success",
+      "passed": true,
+      "results": [
+        {
+          "index": 1,
+          "score": 0.6582365965535861
+        },
+        {
+          "index": 0,
+          "score": 0.19530905663942494
+        }
+      ],
+      "latency_ms": 284,
+      "attempts": [
+        {
+          "stage": "rerank",
+          "model": "qwen3-rerank",
+          "attempt": 1,
+          "latency_ms": 284,
+          "status": "success",
+          "request_id": "1b352ca9-5295-995f-a879-0194952b4f45",
+          "usage": {
+            "total_tokens": 63
+          }
+        }
+      ]
+    },
+    {
+      "probe": 3,
+      "started_at": "2026-09-26T13:52:55.485045+00:00",
+      "status": "success",
+      "passed": true,
+      "results": [
+        {
+          "index": 0,
+          "score": 0.6582365965535861
+        },
+        {
+          "index": 1,
+          "score": 0.19530905663942494
+        }
+      ],
+      "latency_ms": 309,
+      "attempts": [
+        {
+          "stage": "rerank",
+          "model": "qwen3-rerank",
+          "attempt": 1,
+          "latency_ms": 309,
+          "status": "success",
+          "request_id": "c3e59ff5-f483-9997-9445-52aa7427df4b",
+          "usage": {
+            "total_tokens": 63
+          }
+        }
+      ]
+    }
+  ]
+}

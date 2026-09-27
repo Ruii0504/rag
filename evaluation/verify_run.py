@@ -1,4 +1,5 @@
 """Verify report provenance, frozen inputs, and all 100 first-attempt records."""
+import argparse
 import json
 import dataclasses
 from datetime import datetime, timezone
@@ -6,7 +7,12 @@ from datetime import datetime, timezone
 from run_regression import DATA, ROOT, coverage, dump, plain, sha
 from rag_customer_service.config import Settings
 
-run = ROOT / "evaluation/runs/2026-09-25-baseline"
+parser = argparse.ArgumentParser()
+parser.add_argument("--run-dir", default="evaluation/runs/2026-09-25-baseline")
+args = parser.parse_args()
+run = (ROOT / args.run_dir).resolve()
+if not run.is_relative_to(ROOT / "evaluation"):
+    raise ValueError("Run directory must be inside evaluation")
 manifest = json.loads((run / "run-manifest.json").read_text(encoding="utf-8"))
 identity = manifest["identity"]
 assert sha(DATA / "regression-100.jsonl") == identity["dataset_sha256"]
@@ -45,9 +51,23 @@ assert metrics["strict_retrieval"]["denominator"] == 93
 for name, average in metrics["score_means"].items():
     values = [row["scores"][name] for row in rows if row["scores"][name] is not None]
     assert abs(average - sum(values) / len(values)) < 1e-12
+provenance_path = run / "provenance.json"
+provenance = json.loads(provenance_path.read_text(encoding="utf-8")) if provenance_path.exists() else None
+if provenance:
+    inherited = set(provenance["inherited_success_case_ids"])
+    executed = set(provenance["executed_with_fixed_code_case_ids"])
+    assert not inherited & executed
+    assert inherited | executed == {case["case_id"] for case in cases}
+    source_run = ROOT / provenance["source_run"]
+    assert sha(source_run / "run-manifest.json") == provenance["source_manifest_sha256"]
+    for case_id in inherited:
+        assert sha(run / "traces" / f"{case_id}.json") == sha(source_run / "traces" / f"{case_id}.json")
 report = {"verified_at": datetime.now(timezone.utc).isoformat(), "cases": 100,
           "application_source_files_unchanged": len(identity["source_sha256"]),
           "dataset_snapshot_rubric_unchanged": True, "trace_score_metrics_consistent": True,
-          "first_attempt_errors": [row["case_id"] for row in rows if row["execution_status"] == "error"]}
+          "final_execution_errors": [row["case_id"] for row in rows if row["execution_status"] == "error"],
+          "composite_result_set": bool(provenance),
+          "inherited_success_cases": len(provenance["inherited_success_case_ids"]) if provenance else 0,
+          "fixed_code_execution_cases": len(provenance["executed_with_fixed_code_case_ids"]) if provenance else 100}
 dump(run / "verification.json", report)
 print(json.dumps(report, ensure_ascii=False, indent=2))

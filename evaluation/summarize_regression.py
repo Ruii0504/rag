@@ -1,4 +1,5 @@
 """Aggregate manually authored judgments and deterministic retrieval measurements."""
+import argparse
 import importlib.util
 import json
 import statistics
@@ -7,21 +8,24 @@ from pathlib import Path
 
 from run_regression import DATA, ROOT, coverage, dump, sha
 
-RUN = ROOT / "evaluation/runs/2026-09-25-baseline"
-
-
 def main():
-    spec = importlib.util.spec_from_file_location("review_annotations", RUN / "review_annotations.py")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--run-dir", default="evaluation/runs/2026-09-25-baseline")
+    args = parser.parse_args()
+    run = (ROOT / args.run_dir).resolve()
+    if not run.is_relative_to(ROOT / "evaluation"):
+        raise ValueError("Run directory must be inside evaluation")
+    spec = importlib.util.spec_from_file_location("review_annotations", run / "review_annotations.py")
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     cases = [json.loads(line) for line in (DATA / "regression-100.jsonl").read_text(encoding="utf-8").splitlines()]
     chunks = {row["chunk_id"]: row for row in [json.loads(line) for line in (DATA / "chunks.snapshot.jsonl").read_text(encoding="utf-8").splitlines()]}
-    patch_path = RUN / "equivalent-evidence.json"
+    patch_path = run / "equivalent-evidence.json"
     patches = json.loads(patch_path.read_text(encoding="utf-8")) if patch_path.exists() else []
     rows = []
     retrieval_rows = []
     for case in cases:
-        path = RUN / "traces" / (case["case_id"] + ".json")
+        path = run / "traces" / (case["case_id"] + ".json")
         if not path.exists():
             continue
         trace = json.loads(path.read_text(encoding="utf-8"))
@@ -101,10 +105,10 @@ def main():
         "denominator": sum(row["retrieval_query_count"] == 1 for row in retrieval_rows),
         "strict_hit_count": sum(row["retrieval_query_count"] == 1 and row["strict_retrieval"]["hit"] for row in retrieval_rows),
         "reviewed_hit_count": sum(row["retrieval_query_count"] == 1 and row["reviewed_retrieval"]["hit"] for row in retrieval_rows)}
-    stats["scoring_integrity"] = {"rubric_sha256": sha(RUN / "rubric.md"), "annotations_sha256": sha(RUN / "review_annotations.py"),
+    stats["scoring_integrity"] = {"rubric_sha256": sha(run / "rubric.md"), "annotations_sha256": sha(run / "review_annotations.py"),
                                   "dataset_sha256": sha(DATA / "regression-100.jsonl")}
-    dump(RUN / "scores.json", rows)
-    dump(RUN / "metrics.json", stats)
+    dump(run / "scores.json", rows)
+    dump(run / "metrics.json", stats)
     lines = ["# 100题逐题评分", "", "评分顺序：准确性 / 相关性 / 完整性 / 流畅性 / 安全性；满分各5。评分标准见 rubric.md。", ""]
     for row in rows:
         lines.extend([f"## {row['case_id']} · {row['tier']} · {'通过' if row['overall_pass'] else '未通过'}",
@@ -115,7 +119,7 @@ def main():
                       f"主归因：{row['primary_failure_stage']}；次因：{', '.join(row['secondary_failure_stages']) or '无'}", "",
                       f"严格检索：{json.dumps(row['strict_retrieval'], ensure_ascii=False)}", "",
                       f"复核检索：{json.dumps(row['reviewed_retrieval'], ensure_ascii=False)}", ""])
-    (RUN / "scores.md").write_text("\n".join(lines), encoding="utf-8")
+    (run / "scores.md").write_text("\n".join(lines), encoding="utf-8")
     print(json.dumps(stats, ensure_ascii=False, indent=2))
 
 

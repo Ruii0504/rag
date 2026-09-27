@@ -1,0 +1,490 @@
+{
+  "case_id": "RAG-041",
+  "question": "把旧路由器当 AP 接进来以后地址冲突，这边有什么注意事项？",
+  "history": [],
+  "started_at": "2026-09-26T13:25:00.316986+00:00",
+  "calls": [
+    {
+      "stage": "decompose",
+      "output": {
+        "standalone_question": "把旧路由器当 AP 接进来以后地址冲突，这边有什么注意事项？",
+        "subquestions": [
+          {
+            "id": "q1",
+            "text": "把旧路由器当 AP 接进来以后地址冲突，这边有什么注意事项？"
+          }
+        ],
+        "truncated": false
+      },
+      "latency_ms": 7626
+    },
+    {
+      "stage": "chat",
+      "input": [
+        {
+          "role": "system",
+          "content": "把当前问题结合对话历史改写为独立问题，并按最少必要原则拆分。只有用户明确询问多个独立属性或任务时才能拆分。尺寸的长宽高属于同一属性，不得拆分；不得把前置条件另拆成问题。保持用户询问的对象和含义，不得补充或替换为其他对象。只输出 JSON 对象，格式为 {\"standalone_question\":\"...\",\"subquestions\":[\"...\"]}。不得回答问题。"
+        },
+        {
+          "role": "user",
+          "content": "对话历史：[]\n当前问题：把旧路由器当 AP 接进来以后地址冲突，这边有什么注意事项？"
+        }
+      ],
+      "output": "{\n  \"standalone_question\": \"将旧路由器作为AP接入网络时遇到IP地址冲突，有哪些注意事项？\",\n  \"subquestions\": []\n}",
+      "latency_ms": 7626
+    },
+    {
+      "stage": "retrieval",
+      "input": {
+        "query": "把旧路由器当 AP 接进来以后地址冲突，这边有什么注意事项？",
+        "kb_ids": [
+          "f3d12201-b59f-4c71-a42a-9a9e440d97d6"
+        ]
+      },
+      "error_type": "RerankError",
+      "latency_ms": 12636
+    },
+    {
+      "stage": "embedding",
+      "input": "把旧路由器当 AP 接进来以后地址冲突，这边有什么注意事项？",
+      "output": {
+        "dimension": 1024
+      },
+      "latency_ms": 2069
+    },
+    {
+      "stage": "vector_search",
+      "input": {
+        "kb_ids": [
+          "f3d12201-b59f-4c71-a42a-9a9e440d97d6"
+        ],
+        "requested_k": 140
+      },
+      "output": [
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:11",
+          "distance": 0.6518701910972595,
+          "similarity": 0.6053744449106786,
+          "lexical_relevance": 0.12
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:10",
+          "distance": 0.7030343413352966,
+          "similarity": 0.5871872197338844,
+          "lexical_relevance": 0.2
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:14",
+          "distance": 0.7169427871704102,
+          "similarity": 0.5824305896925311,
+          "lexical_relevance": 0.08
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:8",
+          "distance": 0.7518877983093262,
+          "similarity": 0.5708128117366068,
+          "lexical_relevance": 0.08
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:4",
+          "distance": 0.7958943843841553,
+          "similarity": 0.5568256177508557,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:9",
+          "distance": 0.7971141338348389,
+          "similarity": 0.5564476853042788,
+          "lexical_relevance": 0.08
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:0",
+          "distance": 0.8044459819793701,
+          "similarity": 0.5541867199056074,
+          "lexical_relevance": 0.08
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:18",
+          "distance": 0.8053779602050781,
+          "similarity": 0.5539006357906392,
+          "lexical_relevance": 0.32
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:7",
+          "distance": 0.8162051439285278,
+          "similarity": 0.5505985947363623,
+          "lexical_relevance": 0.04
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:9",
+          "distance": 0.8228411674499512,
+          "similarity": 0.5485941495379665,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:8",
+          "distance": 0.8279554843902588,
+          "similarity": 0.5470592738934037,
+          "lexical_relevance": 0.08
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:6",
+          "distance": 0.8288193345069885,
+          "similarity": 0.5468008682604939,
+          "lexical_relevance": 0.12
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:10",
+          "distance": 0.8318453431129456,
+          "similarity": 0.5458976128959939,
+          "lexical_relevance": 0.04
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:13",
+          "distance": 0.8610443472862244,
+          "similarity": 0.537332708625778,
+          "lexical_relevance": 0.12
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:0",
+          "distance": 0.8628518581390381,
+          "similarity": 0.5368113388248625,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:2",
+          "distance": 0.8671165704727173,
+          "similarity": 0.5355851990252647,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:15",
+          "distance": 0.8692780137062073,
+          "similarity": 0.5349659027002117,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:1",
+          "distance": 0.8700403571128845,
+          "similarity": 0.5347478177122759,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:17",
+          "distance": 0.87262362241745,
+          "similarity": 0.5340101385184158,
+          "lexical_relevance": 0.04
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:17",
+          "distance": 0.8880715370178223,
+          "similarity": 0.5296409486578477,
+          "lexical_relevance": 0.08
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:12",
+          "distance": 0.8883851766586304,
+          "similarity": 0.529552981224642,
+          "lexical_relevance": 0.12
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:2",
+          "distance": 0.8950279355049133,
+          "similarity": 0.5276967063462096,
+          "lexical_relevance": 0.08
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:1",
+          "distance": 0.8958812952041626,
+          "similarity": 0.5274591835098582,
+          "lexical_relevance": 0.08
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:0",
+          "distance": 0.9015798568725586,
+          "similarity": 0.5258785195824772,
+          "lexical_relevance": 0.08
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:1",
+          "distance": 0.9047982692718506,
+          "similarity": 0.5249899772232947,
+          "lexical_relevance": 0.08
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:16",
+          "distance": 0.9048449993133545,
+          "similarity": 0.5249770980633454,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:16",
+          "distance": 0.9075630903244019,
+          "similarity": 0.5242290569954041,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:15",
+          "distance": 0.9129139184951782,
+          "similarity": 0.5227626765278934,
+          "lexical_relevance": 0.16
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:9",
+          "distance": 0.9265667796134949,
+          "similarity": 0.5190580521691641,
+          "lexical_relevance": 0.04
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:7",
+          "distance": 0.9273951649665833,
+          "similarity": 0.5188349634660092,
+          "lexical_relevance": 0.08
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:3",
+          "distance": 0.9303569793701172,
+          "similarity": 0.5180388967880458,
+          "lexical_relevance": 0.08
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:12",
+          "distance": 0.9305676221847534,
+          "similarity": 0.5179823739446828,
+          "lexical_relevance": 0.04
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:15",
+          "distance": 0.9316246509552002,
+          "similarity": 0.5176989222546388,
+          "lexical_relevance": 0.16
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:3",
+          "distance": 0.9370879530906677,
+          "similarity": 0.5162388204440987,
+          "lexical_relevance": 0.08
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:13",
+          "distance": 0.9528571963310242,
+          "similarity": 0.5120702127522552,
+          "lexical_relevance": 0.04
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:11",
+          "distance": 0.9564330577850342,
+          "similarity": 0.5111342787941566,
+          "lexical_relevance": 0.2
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:10",
+          "distance": 0.9574692249298096,
+          "similarity": 0.510863714874423,
+          "lexical_relevance": 0.08
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:7",
+          "distance": 0.9634453058242798,
+          "similarity": 0.5093088139677958,
+          "lexical_relevance": 0.08
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:4",
+          "distance": 0.967139482498169,
+          "similarity": 0.5083523608249935,
+          "lexical_relevance": 0.08
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:17",
+          "distance": 0.9765353798866272,
+          "similarity": 0.5059357956230257,
+          "lexical_relevance": 0.12
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:11",
+          "distance": 0.98240727186203,
+          "similarity": 0.5044372133788244,
+          "lexical_relevance": 0.12
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:4",
+          "distance": 0.9888747930526733,
+          "similarity": 0.5027968595575217,
+          "lexical_relevance": 0.08
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:5",
+          "distance": 0.9893350601196289,
+          "similarity": 0.5026805288093926,
+          "lexical_relevance": 0.12
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:14",
+          "distance": 0.9904420971870422,
+          "similarity": 0.502400949725306,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:6",
+          "distance": 0.999538004398346,
+          "similarity": 0.5001155255865699,
+          "lexical_relevance": 0.08
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:16",
+          "distance": 1.004695177078247,
+          "similarity": 0.4988289548625816,
+          "lexical_relevance": 0.12
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:13",
+          "distance": 1.0252948999404907,
+          "similarity": 0.49375525511340745,
+          "lexical_relevance": 0.12
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:3",
+          "distance": 1.031005859375,
+          "similarity": 0.49236687101815124,
+          "lexical_relevance": 0.12
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:8",
+          "distance": 1.053144097328186,
+          "similarity": 0.4870578744576808,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:14",
+          "distance": 1.059812307357788,
+          "similarity": 0.48548112681331823,
+          "lexical_relevance": 0.2
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:5",
+          "distance": 1.1104493141174316,
+          "similarity": 0.47383274893677785,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:12",
+          "distance": 1.1235138177871704,
+          "similarity": 0.4709175855714753,
+          "lexical_relevance": 0.08
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:6",
+          "distance": 1.1465942859649658,
+          "similarity": 0.46585421685796885,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:2",
+          "distance": 1.1645565032958984,
+          "similarity": 0.46198840200167246,
+          "lexical_relevance": 0.08
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:5",
+          "distance": 1.2265336513519287,
+          "similarity": 0.44912862619112454,
+          "lexical_relevance": 0.08
+        }
+      ],
+      "latency_ms": 9
+    }
+  ],
+  "events": [
+    {
+      "type": "node_status",
+      "stage": "rewrite",
+      "message": "问题改写与拆分开始",
+      "payload": {}
+    },
+    {
+      "type": "node_status",
+      "stage": "rewrite",
+      "message": "问题拆分完成：1 项",
+      "payload": {
+        "query": "把旧路由器当 AP 接进来以后地址冲突，这边有什么注意事项？",
+        "subquestions": [
+          {
+            "id": "q1",
+            "text": "把旧路由器当 AP 接进来以后地址冲突，这边有什么注意事项？"
+          }
+        ],
+        "truncated": false
+      }
+    },
+    {
+      "type": "tool_status",
+      "stage": "retrieval",
+      "message": "开始检索 1 个子问题",
+      "payload": {
+        "kb_ids": [
+          "f3d12201-b59f-4c71-a42a-9a9e440d97d6"
+        ],
+        "subquestion_count": 1
+      }
+    },
+    {
+      "type": "error",
+      "stage": "rerank",
+      "message": "千问重排失败，请检查网络连接或超时后重试（ConnectTimeout）",
+      "payload": {}
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "chat",
+      "model": "qwen3.7-plus",
+      "attempt": 1,
+      "latency_ms": 7626,
+      "status": "success",
+      "usage": {
+        "input_tokens": 127,
+        "output_tokens": 473,
+        "total_tokens": 600
+      }
+    },
+    {
+      "stage": "embed_query",
+      "model": "text-embedding-v4",
+      "attempt": 1,
+      "latency_ms": 2069,
+      "status": "success"
+    },
+    {
+      "stage": "rerank",
+      "model": "qwen3-rerank",
+      "attempt": 1,
+      "latency_ms": 5023,
+      "status": "error",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "stage": "rerank",
+      "model": "qwen3-rerank",
+      "attempt": 2,
+      "latency_ms": 5035,
+      "status": "error",
+      "error_type": "ConnectTimeout"
+    }
+  ],
+  "latency_ms": 20265,
+  "final_answer": "",
+  "execution_status": "error",
+  "strict_annotated_retrieval": {
+    "hit": false,
+    "covered_groups": [
+      false
+    ],
+    "recall": 0.0,
+    "complete": false
+  },
+  "retrieved_chunk_ids": [],
+  "retrieval_query_count": 0,
+  "chat_call_count": 1,
+  "embedding_call_count": 1
+}

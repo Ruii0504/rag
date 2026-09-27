@@ -47,6 +47,10 @@ def coverage(case, ids):
             "recall": sum(covered) / len(covered), "complete": all(covered)}
 
 
+def should_stop_after_error(consecutive_errors: int, continue_on_errors: bool) -> bool:
+    return consecutive_errors >= 3 and not continue_on_errors
+
+
 class Observer:
     def __init__(self):
         self.record = None
@@ -109,6 +113,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--run-dir", required=True)
     parser.add_argument("--ids", default="")
+    parser.add_argument("--continue-on-errors", action="store_true")
     args = parser.parse_args()
     target = (ROOT / args.run_dir).resolve()
     if not target.is_relative_to(ROOT / "evaluation"):
@@ -174,7 +179,7 @@ def main():
         dump(path, record)
         print(f"DONE {row['case_id']} status={record['execution_status']} ms={record['latency_ms']} chat={record['chat_call_count']}", flush=True)
         consecutive_errors = consecutive_errors + 1 if record["execution_status"] == "error" else 0
-        if consecutive_errors >= 3:
+        if should_stop_after_error(consecutive_errors, args.continue_on_errors):
             raise RuntimeError("Three consecutive service errors; inspect before continuing")
 
 

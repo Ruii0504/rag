@@ -1,0 +1,484 @@
+{
+  "case_id": "RAG-065",
+  "question": "NL-AX6000 支不支持 IPv6，要去哪里开？",
+  "history": [],
+  "started_at": "2026-09-26T14:07:53.918353+00:00",
+  "calls": [
+    {
+      "stage": "decompose",
+      "output": {
+        "standalone_question": "NL-AX6000 支不支持 IPv6，要去哪里开？",
+        "subquestions": [
+          {
+            "id": "q1",
+            "text": "NL-AX6000 支不支持 IPv6，要去哪里开？"
+          }
+        ],
+        "truncated": false
+      },
+      "latency_ms": 21238
+    },
+    {
+      "stage": "chat",
+      "input": [
+        {
+          "role": "system",
+          "content": "把当前问题结合对话历史改写为独立问题，并按最少必要原则拆分。只有用户明确询问多个独立属性或任务时才能拆分。尺寸的长宽高属于同一属性，不得拆分；不得把前置条件另拆成问题。保持用户询问的对象和含义，不得补充或替换为其他对象。只输出 JSON 对象，格式为 {\"standalone_question\":\"...\",\"subquestions\":[\"...\"]}。不得回答问题。"
+        },
+        {
+          "role": "user",
+          "content": "对话历史：[]\n当前问题：NL-AX6000 支不支持 IPv6，要去哪里开？"
+        }
+      ],
+      "output": "{\n  \"standalone_question\": \"NL-AX6000 是否支持 IPv6，以及在哪里开启？\",\n  \"subquestions\": [\n    \"NL-AX6000 是否支持 IPv6？\",\n    \"NL-AX6000 的 IPv6 功能在哪里开启？\"\n  ]\n}",
+      "latency_ms": 21238
+    },
+    {
+      "stage": "retrieval",
+      "input": {
+        "query": "NL-AX6000 支不支持 IPv6，要去哪里开？",
+        "kb_ids": [
+          "f3d12201-b59f-4c71-a42a-9a9e440d97d6"
+        ]
+      },
+      "error_type": "RerankError",
+      "latency_ms": 617
+    },
+    {
+      "stage": "embedding",
+      "input": "NL-AX6000 支不支持 IPv6，要去哪里开？",
+      "output": {
+        "dimension": 1024
+      },
+      "latency_ms": 288
+    },
+    {
+      "stage": "vector_search",
+      "input": {
+        "kb_ids": [
+          "f3d12201-b59f-4c71-a42a-9a9e440d97d6"
+        ],
+        "requested_k": 140
+      },
+      "output": [
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:15",
+          "distance": 0.4932151138782501,
+          "similarity": 0.6696958734918989,
+          "lexical_relevance": 0.6842105263157895
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:10",
+          "distance": 0.4986356496810913,
+          "similarity": 0.667273596629574,
+          "lexical_relevance": 0.3157894736842105
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:0",
+          "distance": 0.5253616571426392,
+          "similarity": 0.6555822321332208,
+          "lexical_relevance": 0.3157894736842105
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:18",
+          "distance": 0.5254884958267212,
+          "similarity": 0.6555277229134798,
+          "lexical_relevance": 0.3684210526315789
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:0",
+          "distance": 0.5313634872436523,
+          "similarity": 0.6530128270198804,
+          "lexical_relevance": 0.3157894736842105
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:17",
+          "distance": 0.5600244998931885,
+          "similarity": 0.6410155738377621,
+          "lexical_relevance": 0.42105263157894735
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:17",
+          "distance": 0.5730690360069275,
+          "similarity": 0.635700008779269,
+          "lexical_relevance": 0.3684210526315789
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:16",
+          "distance": 0.5747273564338684,
+          "similarity": 0.6350305631729181,
+          "lexical_relevance": 0.3157894736842105
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:16",
+          "distance": 0.587683379650116,
+          "similarity": 0.6298485030563046,
+          "lexical_relevance": 0.3157894736842105
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:11",
+          "distance": 0.6058292388916016,
+          "similarity": 0.6227312193482255,
+          "lexical_relevance": 0.3157894736842105
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:17",
+          "distance": 0.6097126007080078,
+          "similarity": 0.6212289072969703,
+          "lexical_relevance": 0.3684210526315789
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:15",
+          "distance": 0.6216939687728882,
+          "similarity": 0.6166391558801229,
+          "lexical_relevance": 0.42105263157894735
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:14",
+          "distance": 0.6245543360710144,
+          "similarity": 0.6155534338226573,
+          "lexical_relevance": 0.3157894736842105
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:13",
+          "distance": 0.6255342960357666,
+          "similarity": 0.615182344930357,
+          "lexical_relevance": 0.47368421052631576
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:1",
+          "distance": 0.6340193748474121,
+          "similarity": 0.6119878475084678,
+          "lexical_relevance": 0.47368421052631576
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:0",
+          "distance": 0.6377710700035095,
+          "similarity": 0.6105859471542974,
+          "lexical_relevance": 0.42105263157894735
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:6",
+          "distance": 0.6390300393104553,
+          "similarity": 0.6101169447880912,
+          "lexical_relevance": 0.5263157894736842
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:16",
+          "distance": 0.6430955529212952,
+          "similarity": 0.6086073315834117,
+          "lexical_relevance": 0.3157894736842105
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:12",
+          "distance": 0.643409013748169,
+          "similarity": 0.6084912469350963,
+          "lexical_relevance": 0.5263157894736842
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:7",
+          "distance": 0.6436272263526917,
+          "similarity": 0.6084104619142021,
+          "lexical_relevance": 0.21052631578947367
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:11",
+          "distance": 0.6517713069915771,
+          "similarity": 0.60541068595103,
+          "lexical_relevance": 0.3157894736842105
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:14",
+          "distance": 0.6572272777557373,
+          "similarity": 0.6034175356769577,
+          "lexical_relevance": 0.42105263157894735
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:2",
+          "distance": 0.6639043092727661,
+          "similarity": 0.6009960996116807,
+          "lexical_relevance": 0.2631578947368421
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:13",
+          "distance": 0.6736953258514404,
+          "similarity": 0.5974803087242184,
+          "lexical_relevance": 0.42105263157894735
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:13",
+          "distance": 0.6779626607894897,
+          "similarity": 0.5959608180610497,
+          "lexical_relevance": 0.3157894736842105
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:14",
+          "distance": 0.6880940198898315,
+          "similarity": 0.5923840664190387,
+          "lexical_relevance": 0.42105263157894735
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:12",
+          "distance": 0.7009869813919067,
+          "similarity": 0.5878939762265002,
+          "lexical_relevance": 0.3157894736842105
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:12",
+          "distance": 0.7076089382171631,
+          "similarity": 0.585614175247908,
+          "lexical_relevance": 0.42105263157894735
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:15",
+          "distance": 0.7348517775535583,
+          "similarity": 0.5764181199446176,
+          "lexical_relevance": 0.3157894736842105
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:2",
+          "distance": 0.7444716095924377,
+          "similarity": 0.5732394809415274,
+          "lexical_relevance": 0.3157894736842105
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:5",
+          "distance": 0.8473172187805176,
+          "similarity": 0.5413255448677824,
+          "lexical_relevance": 0.2631578947368421
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:9",
+          "distance": 0.8511662483215332,
+          "similarity": 0.5401999960331536,
+          "lexical_relevance": 0.3157894736842105
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:8",
+          "distance": 0.8941497802734375,
+          "similarity": 0.5279413541708624,
+          "lexical_relevance": 0.47368421052631576
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:1",
+          "distance": 0.9616419076919556,
+          "similarity": 0.5097770373271583,
+          "lexical_relevance": 0.3157894736842105
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:10",
+          "distance": 1.0407154560089111,
+          "similarity": 0.49002422020938197,
+          "lexical_relevance": 0.05263157894736842
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:7",
+          "distance": 1.0417451858520508,
+          "similarity": 0.4897770823359062,
+          "lexical_relevance": 0.10526315789473684
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:9",
+          "distance": 1.0523332357406616,
+          "similarity": 0.48725030739908687,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:4",
+          "distance": 1.081014633178711,
+          "similarity": 0.48053482376167567,
+          "lexical_relevance": 0.3684210526315789
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:1",
+          "distance": 1.1065948009490967,
+          "similarity": 0.4746997379607431,
+          "lexical_relevance": 0.05263157894736842
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:11",
+          "distance": 1.1082748174667358,
+          "similarity": 0.47432146497940036,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:9",
+          "distance": 1.1119930744171143,
+          "similarity": 0.4734864011218353,
+          "lexical_relevance": 0.05263157894736842
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:2",
+          "distance": 1.1207059621810913,
+          "similarity": 0.47154108953960117,
+          "lexical_relevance": 0.2631578947368421
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:8",
+          "distance": 1.1294699907302856,
+          "similarity": 0.4696004190493699,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:7",
+          "distance": 1.1302119493484497,
+          "similarity": 0.4694368559456545,
+          "lexical_relevance": 0.05263157894736842
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:4",
+          "distance": 1.1302590370178223,
+          "similarity": 0.46942647942003957,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:10",
+          "distance": 1.13102388381958,
+          "similarity": 0.4692579973377077,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:3",
+          "distance": 1.1360892057418823,
+          "similarity": 0.4681452428634371,
+          "lexical_relevance": 0.3684210526315789
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:5",
+          "distance": 1.199399709701538,
+          "similarity": 0.45466951531775074,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:8",
+          "distance": 1.2295950651168823,
+          "similarity": 0.448511936380509,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:4",
+          "distance": 1.2528245449066162,
+          "similarity": 0.44388720917520536,
+          "lexical_relevance": 0.05263157894736842
+        },
+        {
+          "chunk_id": "2a101509-5c7a-432b-b385-93bc3091be9c:5",
+          "distance": 1.2555891275405884,
+          "similarity": 0.4433431549168546,
+          "lexical_relevance": 0.21052631578947367
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:6",
+          "distance": 1.2751649618148804,
+          "similarity": 0.43952856904156445,
+          "lexical_relevance": 0.05263157894736842
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:6",
+          "distance": 1.3212121725082397,
+          "similarity": 0.4308093899574147,
+          "lexical_relevance": 0.05263157894736842
+        },
+        {
+          "chunk_id": "697856ba-4ee3-4889-8830-10c4d1943930:3",
+          "distance": 1.3450185060501099,
+          "similarity": 0.4264358671029743,
+          "lexical_relevance": 0.0
+        },
+        {
+          "chunk_id": "59ca83a5-b7b0-4e52-85dd-01440f04ef26:3",
+          "distance": 1.3868012428283691,
+          "similarity": 0.41897078904441826,
+          "lexical_relevance": 0.0
+        }
+      ],
+      "latency_ms": 5
+    }
+  ],
+  "events": [
+    {
+      "type": "node_status",
+      "stage": "rewrite",
+      "message": "问题改写与拆分开始",
+      "payload": {}
+    },
+    {
+      "type": "node_status",
+      "stage": "rewrite",
+      "message": "问题拆分完成：1 项",
+      "payload": {
+        "query": "NL-AX6000 支不支持 IPv6，要去哪里开？",
+        "subquestions": [
+          {
+            "id": "q1",
+            "text": "NL-AX6000 支不支持 IPv6，要去哪里开？"
+          }
+        ],
+        "truncated": false
+      }
+    },
+    {
+      "type": "tool_status",
+      "stage": "retrieval",
+      "message": "开始检索 1 个子问题",
+      "payload": {
+        "kb_ids": [
+          "f3d12201-b59f-4c71-a42a-9a9e440d97d6"
+        ],
+        "subquestion_count": 1
+      }
+    },
+    {
+      "type": "error",
+      "stage": "rerank",
+      "message": "千问重排失败（HTTP 403），请检查权限、额度和接口配置",
+      "payload": {}
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "chat",
+      "model": "qwen3.7-plus",
+      "attempt": 1,
+      "latency_ms": 21238,
+      "status": "success",
+      "usage": {
+        "input_tokens": 128,
+        "output_tokens": 1555,
+        "total_tokens": 1683
+      }
+    },
+    {
+      "stage": "embed_query",
+      "model": "text-embedding-v4",
+      "attempt": 1,
+      "latency_ms": 287,
+      "status": "success"
+    },
+    {
+      "stage": "rerank",
+      "model": "qwen3-rerank",
+      "attempt": 1,
+      "latency_ms": 324,
+      "status": "error",
+      "error_type": "HTTPStatusError",
+      "http_status": 403,
+      "request_id": "6ffad20d-fea8-9c77-a462-814a857067a1"
+    }
+  ],
+  "latency_ms": 21858,
+  "final_answer": "",
+  "execution_status": "error",
+  "strict_annotated_retrieval": {
+    "hit": false,
+    "covered_groups": [
+      false
+    ],
+    "recall": 0.0,
+    "complete": false
+  },
+  "retrieved_chunk_ids": [],
+  "retrieval_query_count": 0,
+  "chat_call_count": 1,
+  "embedding_call_count": 1
+}
