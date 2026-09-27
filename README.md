@@ -46,19 +46,19 @@
 <a id="features"></a>
 
 <p align="center">
-  <img src="1.jpg" alt="RAG 智能客服概览页面" width="960" />
+  <img src="product%20data/asset/1.jpg" alt="RAG 智能客服概览页面" width="960" />
 </p>
 
 <p align="center"><sub>项目概览：运行配置与本地知识库状态</sub></p>
 
 <p align="center">
-  <img src="2.jpg" alt="RAG 智能客服知识库管理页面" width="960" />
+  <img src="product%20data/asset/2.jpg" alt="RAG 智能客服知识库管理页面" width="960" />
 </p>
 
 <p align="center"><sub>知识库管理：批量上传 Markdown 并查看文档切块状态</sub></p>
 
 <p align="center">
-  <img src="3.jpg" alt="RAG 智能客服证据约束问答页面" width="960" />
+  <img src="product%20data/asset/3.jpg" alt="RAG 智能客服证据约束问答页面" width="960" />
 </p>
 
 <p align="center"><sub>证据约束问答：展示执行过程、回答引用与原始证据</sub></p>
